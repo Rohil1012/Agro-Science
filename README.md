@@ -75,3 +75,21 @@ Every project needs improvements, Feel free to report any bugs or improvements. 
 - Server side validation for Login/ Sign-up  
 - Not responsive UI
 - User can not answer in every query post
+
+## Screenshots
+![GitHub Logo](/Screenshots/1.PNG)
+![GitHub Logo](/Screenshots/2.PNG)
+![GitHub Logo](/Screenshots/3.PNG)
+![GitHub Logo](/Screenshots/4.PNG)
+![GitHub Logo](/Screenshots/5.PNG)
+![GitHub Logo](/Screenshots/6.PNG)
+![GitHub Logo](/Screenshots/7(2).PNG)
+![GitHub Logo](/Screenshots/8.PNG)
+![GitHub Logo](/Screenshots/9.PNG)
+![GitHub Logo](/Screenshots/10.PNG)
+![GitHub Logo](/Screenshots/11.PNG)
+![GitHub Logo](/Screenshots/12.PNG)
+![GitHub Logo](/Screenshots/13.PNG)
+![GitHub Logo](/Screenshots/14.PNG)
+![GitHub Logo](/Screenshots/15.PNG)
+![GitHub Logo](/Screenshots/16.PNG)
