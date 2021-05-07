@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegetables</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/css/vbar.css">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Original+Surfer&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+         *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: sans-serif;
+            font-size: 10px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #1b1e21;
+           
+            padding: 0 1.5rem;
+        }
+
+        .container {
+      
+            width: 100%;
+            max-width: 88rem;
+            padding: 5rem;
+            height: 220px;
+            background: #dfdac4;
+            box-shadow:5px 7px 6px 0px rgba(104, 104, 104, 0.972);
+            display: flex;
+            align-items: center;
+            border-radius: .8rem;
+            margin: 15px;
+            margin-left: 70px;
+            margin-top: 40px;
+          
+        }
+
+
+
+        .image {
+            min-width: 35rem;
+            max-width: 35rem;
+            height: 17rem;
+            transform: translateX(-8rem);
+            position: relative;
+            box-shadow: .5rem .5rem 3px 1px rgba(0, 0, 0, 0.5);
+            border-radius: .8rem;
+        }
+
+        .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: .8rem;
+        }
+
+        /* .image::before {
+            content: '';
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: .8rem;
+        } */
+
+       
+        .title {
+           font-family: 'Original Surfer', cursive;
+            font-size: 3.5rem;
+            margin-right: 63px;
+            text-transform: uppercase;
+            color:#0c645e;
+        }
+
+        .modal-open {
+            padding: 8px 16px;
+            background: #ac7b7d;
+            background-image:  url("/images/akbg1.jpg");
+            color: #fff;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            margin: 5px 0;
+            font-size: 18px;
+            font-weight: bold;
+            width: 250px;
+            position: relative;
+            transform: translateX(7rem);
+        }
+
+        .modal-open:hover {
+            background-image: url("/images/akbg2.jpg")
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 2;
+            display: none;
+            animation: modal-open .5s;
+        }
+
+        .modal-content {
+            background-image: url("/images/akmbg.jpg");
+            margin-top: 55px;
+            width: 80%;
+             height: auto;
+            margin-bottom: auto;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 8px 24px;
+            border-radius: 10px;
+            z-index: 4;
+        }
+
+        .modal-header {
+            font-weight: 500;
+            padding: 10px 0;
+            font-size: 30px;
+            font-weight: 600;
+            color: rgb(153, 16, 16);
+            
+        }
+
+        .modal-header .modal-close {
+            float: right;
+            font-size: 20px;
+           background: none;
+           border: none;
+            padding: 5px 8px;
+            cursor: pointer;
+          
+        }
+
+        .modal-body {
+            color: #08073f;
+            font-size: 17px;
+            padding: 15px 0;
+            font-weight: 800;
+        }
+
+        .modal-footer {
+            padding: 15px 0;
+        }
+
+        .modal-footer .modal-close {
+            padding: 8px 16px;
+            font-size: 14px;
+            border: none;
+            outline: none;
+            background-image: url('/images/akmbbg.jpg');
+            border-radius: 5px;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+              text-transform: uppercase;
+        }
+
+        @keyframes modal-open {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+          
+
+  
+    </style>
+</head>
+
+<body>
+   
+    <div class="content">
+        <div class="vertical-bar">
+            <div class="search-icon">
+                <a href="/agriknowledge"><i class="fa fa-chevron-circle-left"></i></a>
+                <a href="/"><i class="fa fa-home"></i></a>
+    
+            </div>
+            <div class="social-icons">
+            </div>
+        </div>
+    </div>
+
+    <!-- container 01 -->
+    <div class="container"  >
+        <div class="image">
+            <img src="/images/kvchilli.jpg">
+        </div>
+        <div class="t">
+            <h1 class="title" style="margin-left: 35px;">chilli</h1>
+        </div>
+        
+        <div class="info">
+            <button class="modal-open" data-modal="modal1">SOIL & SEASON OF SOWING</button><br>
+            <button class="modal-open" data-modal="modal2">SEED TREATMENT</button><br>
+            <button class="modal-open" data-modal="modal3">FIELD PREPARATION</button><br>
+            <button class="modal-open" data-modal="modal4">HARVEST</button><br>
+        </div>
+    </div>
+
+    <!-- container 02 -->
+    <div class="container" >
+        <div class="image">
+            <img src="/images/kvgarlic.jpg" >
+        </div>
+        <h1 class="title" style="margin-left: 17px;">garlic</h1>
+        <div class="info">
+            <button class="modal-open" data-modal="modal5">CLIMATE & SOIL</button><br>
+            <button class="modal-open" data-modal="modal6">PROPAGATION</button><br>
+            <button class="modal-open" data-modal="modal7">HARVESTING</button><br>
+            <button class="modal-open" data-modal="modal8">PLANT PROTECTION</button><br>
+        </div>
+    </div>
+
+    <!-- container 03 -->
+    <div class="container">
+        <div class="image">
+            <img src="/images/kvtomato.jpg">
+        </div>
+        <h1 class="title" style="   margin-right: 57px;">TOMATO</h1>
+        <div class="info">
+            <button class="modal-open" data-modal="modal9">SOIL & SEASON OF SOWING</button><br>
+            <button class="modal-open" data-modal="modal10">SEED TREATMENT</button><br>
+            <button class="modal-open" data-modal="modal11">FIELD PREPARATION</button><br>
+            <button class="modal-open" data-modal="modal12">IRRIGATION & WEED CONTROL</button><br>
+        </div>
+    </div>
+
+    <!-- C01 M01 -->
+    <div class="modal" id="modal1">
+        <div class="modal-content">
+            <div class="modal-header">SOIL & SEASON OF SOWING
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+    
+            <div class="modal-body">Soil:<br> Well drained loamy soils rich in organic matter with pH range 6.5-7.5.<br><br>Season of Sowing:<br> 1. January - February<br>
+            2. June - July<br>
+            3. September- October<br>
+</div>
+            <div class="modal-footer">
+                <button class="link modal-close">CLOSE</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C01 M02 -->
+    <div class="modal" id="modal2">
+        <div class="modal-content">
+            <div class="modal-header">SEED TREATMENT
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+            <div class="modal-body">Seed Treatment: <br> Treat the seeds with Trichoderma viride @ 4 g / kg or Pseudomonas fluorescens @ 10 g/ kg and sow in lines spaced at 10
+            cm in raised nursery beds and cover with sand. Watering with rose can has to be done daily. Drench the nursery with
+            Copper oxychloride @ 2.5 g/l of water at 15 days interval against damping off disease. Apply Carbofuran 3 G at 10
+            g/sq.m. at sowing.
+</div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C01 M03 -->
+    <div class="modal" id="modal3">
+        <div class="modal-content">
+            <div class="modal-header">FIELD PREPARATION
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+            <div class="modal-body">Field Preparation:<br> Thoroughly prepare the field with the addition of FYM @ 25 t/ ha and form ridges and furrows at a spacing of 60 cm.
+            Apply 2 kg/ha of Azospirillum and 2 kg / ha of Phosphobacteria by mixing with 20 kg of FYM. Irrigate the furrows and
+            transplant 40-45 days old seedlings, with the ball of earth on the ridges.<br><br>
+            
+            
+            Spacing<br>
+            Varieties: 60 x 45 cm<br>
+            Hybrids: 75 x 60 cm<br><br>
+            
+            Weed control<br>
+            Apply Pendimethalin 1.0 kg a.i. / ha or Fluchloralin 1.0 kg a.i. / ha as pre-emergece herbicide followed by hand weeding
+            once 30 days after planting.<br><br>
+            
+            
+            Irrigation<br>
+            Irrigate is done at weekly intervals.<br>
+            </div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C01 M04 -->
+    <div class="modal" id="modal4">
+        <div class="modal-content">
+            <div class="modal-header">HARVEST
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+     
+            <div class="modal-body">
+            
+        Harvesting can be done 75 days after transplanting. First two picking yield green chilli and subsequently yield red ripe
+        fruits.
+            </div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- C02 MO1 -->
+    <div class="modal" id="modal5">
+        <div class="modal-content">
+            <div class="modal-header">CLIMATE & SOIL
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+            <div class="modal-body">It is grown under a wide range of climatic conditions. However, it cannot stand too hot or too cold weather. It prefers
+            moderate temperature in summer as well as in winter. Short days are very favourable for the formation of bulbs. It can
+            be grown well at elevations of 1000 to 1300 m above MSL. Garlic requires well drained loamy soils, rich in humus, with
+            fairly good content of potash. The crop raised on sandy or loose soil does soils, the bulbs produced are deformed and
+            during harvesting, many bulbs are broken and bruised and so they do not keep well in storage.</div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C02 M02 -->
+    <div class="modal" id="modal6">
+        <div class="modal-content">
+            <div class="modal-header">PROPAGATION
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+            <div class="modal-body">Garlic is propagated by cloves. All the cloves are planted except the long slender once in the centre of the bulb. Bulbs
+            with side growth should be discarded. Healthy cloves or bulbils free from disease and injuries should be used for sowing
+            and about 150 to 200 kg cloves are required to plant one hectare. They are sown by dibbling or furrow planting.<br><br>
+            
+            Dibbling: <br>The field is divided into small plots convenient for irrigation Cloves may be dibbled 5 to 7.5cm deep, keeping
+            their growing ends upwards. They are laced 7.5cm apart from each other in rows of 15cm apart and then they are covered
+            with loose soil. June-July and October-November are the normal planting seasons for garlic.<br><br>
+            Furrow planting:<br> The furrows are made 15 cm with hand how or a cotton drill. In these furrows, cloves are dropped by
+            hand 7.5 to 10 cm apart. They are covered lightly with loose soil and a light irrigation is given.</div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C02 M03 -->
+    <div class="modal" id="modal7">
+        <div class="modal-content">
+            <div class="modal-header">HARVESTING
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+          
+            <div class="modal-body">Garlic is a crop of 4 ½ to 5 months duration. When the leaves start turning yellowish or brownish and show signs of
+            drying up, the crop is ready for harvest. The plants are then pulled out or uprooted with a country plough and are tied
+            into small bundles which are then kept in the field or in the shade or 2-3 days for curing and drying so that the bulbs
+            become hard and their keeping quality is improved. The bulbs may be stored by hanging them on bamboo sticks or by
+            keeping them on dry sand on the market, the dried stalks are removed and bulbs are cleaned. Well cured garlic bulbs can
+            be kept for 1 to 1 ½ months in an ordinary well ventilated room. If dust smoke is given to it, the bulbs can be stored
+            for 8 to 10 months. They can also be stored at 320F with 60% R.H. Average yield level is 6 to 8 t/ha.</div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C02 M04 -->
+    <div class="modal" id="modal8">
+        <div class="modal-content">
+            <div class="modal-header">PLANT PROTECTION
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+            <div class="modal-body">Thrips cause withering of the leaves. Application of methyl demeton 25EC 1 ml/litre will check the incidence. Leaf spot
+            is the most important disease. Spraying Dithane M-45 at fortnightly intervals at 2.5g in one litre of water is
+            recommended.</div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C03 M01 -->
+    <div class="modal" id="modal9">
+        <div class="modal-content">
+            <div class="modal-header">SOIL & SEASON OF SOWING
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+            <div class="modal-body">Soil:<br>
+            Well drained loamy soils rich in organic matter with a pH range of 6.5-7.5.<br><br>
+            
+            Season of sowing:<br>
+            May - June and November – December<br></div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C03 M02 -->
+    <div class="modal" id="modal10">
+        <div class="modal-content">
+            <div class="modal-header">SEED TREATMENT
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+         
+            <div class="modal-body">Treat the seeds with Trichoderma viride 4 g or Pseudomonas fluorescens 10 g or Carbendazim 2 g per kg of seeds 24 hours
+            before sowing. Just before sowing, treat the seeds with Azospirillum @ 40 g / 400 g of seeds. Sow in lines at 10 cm
+            apart in raised nursery beds and cover with sand.</div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C03 M03 -->
+    <div class="modal" id="modal11">
+        <div class="modal-content">
+            <div class="modal-header">FIELD PREPARATION
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+            <div class="modal-body">Plough the land to fine tilth. Thoroughly prepare the field with the addition of FYM @ 25 t/ ha and form ridges and
+            furrows at a spacing of 60 cm. Apply 2 kg/ha of Azospirillum and 2 kg/ha of Phosphobacteria by mixing with 50 kg of FYM.
+            Irrigate the furrows and transplant 25 days old seedlings on the sides of ridges. Life irrigation to be given on 3rd day
+            of planting.</div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C03 M04 -->
+    <div class="modal" id="modal12">
+        <div class="modal-content">
+            <div class="modal-header">IRRIGATION & WEED CONTROL
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+            <div class="modal-body">Weed control<br>
+            Apply Pendimethalin 1.0 kg a.i./ha or Fluchloralin 1.0 kg a.i / ha as pre-emergence herbicide, followed by hand weeding
+            once at 30 days after planting.<br><br>
+            
+            Irrigation<br>
+            After establishment of seedlings, irrigate at weekly intervals.<br><br></div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/akfruits.js"></script>
+</body>
+
+</html>

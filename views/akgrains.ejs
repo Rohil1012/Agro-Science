@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grains</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/css/vbar.css">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Original+Surfer&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+         *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: sans-serif;
+            font-size: 10px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #1b1e21;
+           
+            padding: 0 1.5rem;
+        }
+
+        .container {
+      
+            width: 100%;
+            max-width: 88rem;
+            padding: 5rem;
+            height: 220px;
+            background: #dfdac4;
+            box-shadow:5px 7px 6px 0px rgba(104, 104, 104, 0.972);
+            display: flex;
+            align-items: center;
+            border-radius: .8rem;
+            margin: 15px;
+            margin-left: 70px;
+            margin-top: 40px;
+          
+        }
+
+
+
+        .image {
+            min-width: 35rem;
+            max-width: 35rem;
+            height: 17rem;
+            transform: translateX(-8rem);
+            position: relative;
+            box-shadow: .5rem .5rem 3px 1px rgba(0, 0, 0, 0.5);
+            border-radius: .8rem;
+        }
+
+        .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: .8rem;
+        }
+
+        /* .image::before {
+            content: '';
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: .8rem;
+        } */
+
+       
+        .title {
+           font-family: 'Original Surfer', cursive;
+            font-size: 3.5rem;
+            margin-right: 63px;
+            text-transform: uppercase;
+            color:#0c645e;
+        }
+
+        .modal-open {
+            padding: 8px 16px;
+            background: #ac7b7d;
+            background-image:  url("/images/akbg1.jpg");
+            color: #fff;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            margin: 5px 0;
+            font-size: 18px;
+            font-weight: bold;
+            width: 250px;
+            position: relative;
+            transform: translateX(8rem);
+        }
+
+        .modal-open:hover {
+            background-image: url("/images/akbg2.jpg")
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 2;
+            display: none;
+            animation: modal-open .5s;
+        }
+
+        .modal-content {
+            background-image: url("/images/akmbg.jpg");
+            margin-top: 20px;
+            width: 80%;
+             height: auto;
+            margin-bottom: auto;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 8px 24px;
+            border-radius: 10px;
+            z-index: 4;
+        }
+
+        .modal-header {
+            font-weight: 500;
+            padding: 10px 0;
+            font-size: 30px;
+            font-weight: 600;
+            color: rgb(153, 16, 16);
+            
+        }
+
+        .modal-header .modal-close {
+            float: right;
+            font-size: 20px;
+           background: none;
+           border: none;
+            padding: 5px 8px;
+            cursor: pointer;
+          
+        }
+
+        .modal-body {
+            color: #08073f;
+            font-size: 17px;
+            padding: 15px 0;
+            font-weight: 800;
+        }
+
+        .modal-footer {
+            padding: 15px 0;
+        }
+
+        .modal-footer .modal-close {
+            padding: 8px 16px;
+            font-size: 14px;
+            border: none;
+            outline: none;
+            background-image: url('/images/akmbbg.jpg');
+            border-radius: 5px;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+              text-transform: uppercase;
+        }
+
+        @keyframes modal-open {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+          
+
+  
+    </style>
+</head>
+
+<body>
+   
+    <div class="content">
+        <div class="vertical-bar">
+            <div class="search-icon">
+                <a href="/agriknowledge"><i class="fa fa-chevron-circle-left"></i></a>
+                <a href="/"><i class="fa fa-home"></i></a>
+    
+            </div>
+            <div class="social-icons">
+            </div>
+        </div>
+    </div>
+
+    <!-- container 01 -->
+    <div class="container"  >
+        <div class="image">
+            <img src="/images/kgwheat.jpg">
+        </div>
+        <div class="t">
+            <h1 class="title">WHEAT</h1>
+        </div>
+        
+        <div class="info">
+            <button class="modal-open" data-modal="modal1">CLIMATE & SOIL</button><br>
+            <button class="modal-open" data-modal="modal2">LAND PREPARATION</button><br>
+            <button class="modal-open" data-modal="modal3">SOWING</button><br>
+            <button class="modal-open" data-modal="modal4">HARVESTING & STORAGE</button><br>
+        </div>
+    </div>
+
+    <!-- container 02 -->
+    <div class="container" >
+        <div class="image">
+            <img src="/images/kgbajra.jpg" >
+        </div>
+        <h1 class="title">BAJRA</h1>
+        <div class="info">
+            <button class="modal-open" data-modal="modal5">CLIMATE & SOIL</button><br>
+            <button class="modal-open" data-modal="modal6"> SOWING</button><br>
+            <button class="modal-open" data-modal="modal7">PLANT PROTECTION</button><br>
+            <button class="modal-open" data-modal="modal8">HARVESTING & STORAGE</button><br>
+        </div>
+    </div>
+
+    <!-- container 03 --> 
+    <div class="container">
+        <div class="image">
+            <img src="/images/kgmaize.jpg">
+        </div>
+        <h1 class="title" style="   margin-right: 77px;">MAIZE</h1>
+        <div class="info">
+            <button class="modal-open" data-modal="modal9">CLIMATE & SOIL</button><br>
+            <button class="modal-open" data-modal="modal10">LAND PREPARATION</button><br>
+            <button class="modal-open" data-modal="modal11">SOWING</button><br>
+            <button class="modal-open" data-modal="modal12">HARVESTING</button><br>
+        </div>
+    </div>
+
+    <!-- C01 M01 -->
+    <div class="modal" id="modal1">
+        <div class="modal-content">
+            <div class="modal-header">CLIMATE & SOIL
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+    
+            <div class="modal-body">The ideal temperature requirement varies from plant type and stages of growth. The dwarf varieties require the following
+            temperature for their growth and development:<br><br>
+            
+            
+            Germination: &nbsp; &nbsp; 20 to 25 0 C mean daily temperature<br>
+            Tillering:&nbsp; &nbsp; 16 to 20 0 C mean daily temperature<br>
+            Accelerated growth: &nbsp; &nbsp;20 to 23 0 C mean daily temperature<br>
+            Proper grain filling :&nbsp; &nbsp;23 to 25 0 C mean daily temperature<br><br>
+            Wheat plants are sensitive to very cold or frost injury at any stage of growth particularly at reproductive growth if
+            temperature is below 150.</div>
+            <div class="modal-footer">
+                <button class="link modal-close">CLOSE</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C01 M02 -->
+    <div class="modal" id="modal2">
+        <div class="modal-content">
+            <div class="modal-header">LAND PREPARATION
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+            <div class="modal-body">The wheat crop requires a well-pulverized but compact seed bed for good and uniform germination. Three or four
+            ploughings in the summer, repeated harrowing in the rainy season, followed by three or four cultivations and planking
+            immediately before sowing produce a good, firm seed bed for the dry crop on alluvial soils. For the irrigated crop, the
+            land is given a pre-sowing irrigation (palewa or raund) and the number of ploughings is reduced. Where white ants or
+            other pests are a problem, Aldrin 5% or BHC 10% dust at the rate of 25 kg/ha should be applied to the soil after the
+            last ploughing or before planking..</div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C01 M03 -->
+    <div class="modal" id="modal3">
+        <div class="modal-content">
+            <div class="modal-header">SOWING
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+            <div class="modal-body">a) Sowing time:<br>
+            Based on above temperature requirement it has been found that for indigenous wheat last week of October, for long
+            duration dwarf varieties like Kalyansona, Arjun, etc. first fortnight of November and for short duration dwarf wheats
+            like Sonalika, Raj 821 etc. second fortnight is the best sowing time. Under exceptionally late sown condition it may be
+            delayed to latest by 1st week of December beyond which if area is very small transplanting may be practiced.<br><br>
+            
+            b) Seed rate:<br>
+            Generally, a seed rate of 100 kg/ha has been found to be sufficient for most of the varieties like Kalyan Sona, Arjun,
+            Janak, etc.which have moderate tillering and medium sized grains. But a higher seed rate of 125 kg/ha is desirable for
+            late sown wheat and normal sown for varieties like Sonalika, Raj 821 etc. which have bold grains and shy tillering
+            habits.<br><br>
+            
+            c) Spacing: :
+            For irrigated, timely sown wheat, a row spacing of 15 to 22.5 cm is followed, but 22.5 cm between the rows is considered
+            to be the optimum spacing. Under irrigated late-sown conditions, a row spacing of 15-18 cm is the optimum.</div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C01 M04 -->
+    <div class="modal" id="modal4">
+        <div class="modal-content">
+            <div class="modal-header">HARVESTING & STORAGE
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+     
+            <div class="modal-body">a) Harvesting:<br>
+            The rain-fed crop reaches the harvest stage much earlier than the irrigated crop. The crop is harvested when the grains
+            become hard and the straw becomes dry and brittle.The harvesting is mostly done by sickle. The crop is threshed by
+            treading with cattle on the threshing-flour or by power driven thresher.<br><br>
+            
+            b) Yield:<br>
+            The national average yield of wheat grain is about 12 to 13.8 quintals per hectare.<br><br>
+            
+            c) Storage:<br>
+            The grains should be thoroughly dried before storage. The storage life of the grain is closely related to its moisture
+            content. Grains with less than 10 percent moisture store well. The storage pits, bins or godowns should be
+            moisture-proof and should be fumigated to keep down the stored – grain pests including rats. Zinc phosphide is very
+            effective against rats.
+            
+            </div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C02 MO1 -->
+    <div class="modal" id="modal5">
+        <div class="modal-content">
+            <div class="modal-header">CLIMATE & SOIL
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+            <div class="modal-body">The crop has a wide adaptability as it may grow under different day lengths, temperature and moisture stress. Most of
+            the varieties developed in India are photosensitive which helps in growing the crop during monsoon, rabi and arid
+            season. It requires low annual rainfall ranging between 40-50 cm and dry weather. The crop may tolerate drought but
+            cannot withstand high rainfall of 90 cm or above. Light soils of low inherent fertility good drainage, mild salinity are
+            best type for this crop. Crop does not tolerate soil acidity</div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C02 M02 -->
+    <div class="modal" id="modal6">
+        <div class="modal-content">
+            <div class="modal-header">SOWING
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+            <div class="modal-body">Sowing time :- <br>Most appropriate time of sowing is middle or last week of July<br><br>
+            Seed rate:<br>
+            4-5 kg/ha for drilling method<br>
+            2.5-3 kg/ha for dibbling method<br><br>
+            spacing:<br> 40 –45 cm between rows, 10 –15 cm within rows.<br></br>
+            Seed treatment:<br> The organo-mercurial compound Ceresan, Agrosan should be used @ 2.5-3 kg/ha to control seed borne
+            diseases.
+            
+            Generally the crop requires low quantity of nutrients. But All India Co-ordinated Millet Improvement Project has proved
+            that new plant types of bajra especially hybrids respond to very high doses of fertilizers.
+            
+            
+            Fertilizers are applied in split doses, half of nitrogen, full phosphorus and potash should be basal placed at the time
+            of sowing .</div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C02 M03 -->
+    <div class="modal" id="modal7">
+        <div class="modal-content">
+            <div class="modal-header">PLANT PROTECTION
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+            <!-- <img src="animals.jpg" style="width: 150px; height: 120px;"> -->
+            <div class="modal-body">a) Insect pests:<br>
+            Stem bores and grasshoppers are serious pests of bajra controlled by two sprayings with 2 litres of Eldrin 20 c.c and
+            grasshoppers may be controlled by dusting the crop with BHC 5 percent.<br><br>
+            
+            b) Diseases:<br>
+            Downy mildew- for controlling this disease seed treatment with fungicide like Dithane Z-78 or M-45 @ 2.0kg/ha in
+            800-1000 lit. of water.<br>
+            Smut- Treatment with Ceresan or Thirum @ 1-2 g/kg seeds is effective.<br>
+            Ergot- Seed treatment with 20% common salt solution followed by washing with fresh water and then treating with Ceresan
+            or Thirum @ 1-2 g/kg seeds is effective</div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C02 M04 -->
+    <div class="modal" id="modal8">
+        <div class="modal-content">
+            <div class="modal-header">HARVESTING & STORAGE
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+            <div class="modal-body">Harvesting and threshing:<br>
+            The crop is harvested when grains become hard enough and contain moisture. Two methods are adopted for harvesting the
+            crop Cutting earhead<br>
+            i) from standing crop followed by cutting of remaining plants later.<br>
+            ii) Cutting of entire plants by sticks and stalking the plants for five days in sun for obtaining grains. Grains are
+            separated either by beating the earheads with sticks or by trampling the earheads under bullock feet.<br><br>
+            
+            Storage:<br>
+            The separated grains must be cleaned and dried in sun to bring about 12-14% moisture after which the grains may be
+            bagged and stored in a moisture proof store.<br><br>
+            
+            Yield: <br>Irrigated crop yields 30-35 quintals/ha, while unirrigated crop yield 12-15 quintals/ha.</div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C03 M01 -->
+    <div class="modal" id="modal9">
+        <div class="modal-content">
+            <div class="modal-header">CLIMATE & SOIL
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+            <div class="modal-body">Maize requires fertile, deep and well drained soils. However, it can be grown on any type of soil, ranging from deep
+            heavy clays to light sandy ones. It is, however, necessary that the pH of the soil does not deviate from the range 7.5
+            to 8.5 Maize plants, particularly in the seedling stage, are highly susceptible to salinity and water . Accordingly the
+            provision of proper drainage is essential for the successful cultivation of this crop. The slight sandy soils greatly
+            facilitated drainage, but have a relatively poor water holding capacity; on the contrary, very heavy soils, with
+            excellent water holding capacity, have relatively poor drainage. Hence, soils ideally suited for maize cultivation
+            should have adequate water holding capacity and should also provide for good drainage. Over 85 per cent of the maize
+            acreage is own under rain fed conditions during the monsoon when over 80 per cent of the annual rainfall is received.Maize is essentially a warm weather crop. It is grown under extremely divergent climatic conditions in different parts
+            of the world, ranging from tropical to temperate regions. It is widely cultivated from the sea level upto altitudes of
+            2,500 m. It can be successfully grown where the night temperature does not go below 15.60C (600F). It cannot withstand
+            frost any stage of its growth. In India, its cultivation extends from the hot arid Plains of Rajasthan and Gujarat to
+            the wet hills of Assam and Bengal (receiving over 400 cm of rainfall).</div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C03 M02 -->
+    <div class="modal" id="modal10">
+        <div class="modal-content">
+            <div class="modal-header">LAND PREPARATION
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+         
+            <div class="modal-body">A good seedbed for maize should be fine but compact, and free from weeds. It is desirable that the previous crop refuse
+            is buried under with a mouldboard plough. In due course, two or three ploughings with the wooden plough are given. In
+            case the tractor is used, one ploughing followed by a couple of diskings is generally adequate.
+            
+            For kharif cultivation, it is essential that adequate drainage is provided. It may be provided in the form of very
+            shallow surface drains at 40-50 m apart (depending on the slope and the texture of the soil) across the slope and
+            connected to main outlet. Shallow drains do not obstruct the movement of the cattle or tractors during cultivation.
+            Surface drains should be provided during sowing.</div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C03 M03 -->
+    <div class="modal" id="modal11">
+        <div class="modal-content">
+            <div class="modal-header">SOWING
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+            <div class="modal-body">There are three distinct seasons for the cultivation of maize: the main season is kharif; whereas its cultivation during
+            Rabi in Peninsular India and Bihar and in spring in northern India is done. Higher yields have been recorded in the Rabi
+            and spring crops. The higher yields are primarily due to better water management and the lower incidence of disease and
+            pests.Sowing made a week tomten days before the usual break of monsoon, with initial one or two irrigations, provide a better
+            chance for the establishment of plants, and yield increases of 15-20 per cent have also been recorded.
+            
+            Maize is sown in rows, 60-75 cm apart, whereas the plants in the row are spaced at 20 to 25 cm. A population of 60-75
+            thousand plants per hectare at harvest are required for obtaining the optimum yield. Sowing in rows is generally done
+            with drill or by dropping the seed behind the plough. The practice of broading, particularly under rain fed conditions
+            and for fodder maize is still prevalent in several parts of country. Seventeen to 20 kg of seed for the grain crop and
+            35-40 kg per hectare for the fodder crop is needed.</div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C03 M04 -->
+    <div class="modal" id="modal12">
+        <div class="modal-content">
+            <div class="modal-header">HARVESTING
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+            <div class="modal-body">The maize crop sown for grain is harvested when the grains are nearly dry and do not contain more than 20 per cent
+            moisture. The appearance of the plant may be misleading, particularly in the case of high yielding hybrids and
+            composites whose grains are dry, while the stalk and leaves may be still green. Ears are removed from the standing crop.
+            Harvested ears are dried in the sun before shelling. In the case of the late-sown crop, farmers prefer to harvest the
+            whole plants and pile them, and the ears are removed are removed later. Maize stalks are used as cattle feed or fuel. In
+            fact, no part of the maize plant, even the cobs from which the grains have been removed, is left unused.
+            
+            Maize grown for fodder should be harvested at the milk to early dough stage; the earlier harvested crop is likely to
+            yield less and have a lower protein content. For silage, however, the late dough is preferred. Both power and hand
+            operated low priced maize shellers are available indigenously. These shellers are considerably more efficient than hand
+            shelling or beating with sticks, the common practice in northern India.</div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/akfruits.js"></script>
+</body>
+
+</html>

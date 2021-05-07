@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowers</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/css/vbar.css">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Original+Surfer&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+         *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: sans-serif;
+            font-size: 10px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #1b1e21;
+           
+            padding: 0 1.5rem;
+        }
+
+        .container {
+      
+            width: 100%;
+            max-width: 88rem;
+            padding: 5rem;
+            height: 220px;
+            background: #dfdac4;
+            box-shadow:5px 7px 6px 0px rgba(104, 104, 104, 0.972);
+            display: flex;
+            align-items: center;
+            border-radius: .8rem;
+            margin: 15px;
+            margin-left: 70px;
+            margin-top: 40px;
+          
+        }
+
+
+
+        .image {
+            min-width: 35rem;
+            max-width: 35rem;
+            height: 17rem;
+            transform: translateX(-8rem);
+            position: relative;
+            box-shadow: .5rem .5rem 3px 1px rgba(0, 0, 0, 0.5);
+            border-radius: .8rem;
+        }
+
+        .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: .8rem;
+        }
+
+        /* .image::before {
+            content: '';
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: .8rem;
+        } */
+
+       
+        .title {
+           font-family: 'Original Surfer', cursive;
+            font-size: 3.5rem;
+            margin-right: 63px;
+            text-transform: uppercase;
+            color:#0c645e;
+        }
+
+        .modal-open {
+            padding: 8px 16px;
+            background: #ac7b7d;
+            background-image:  url("/images/akbg1.jpg");
+            color: #fff;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            margin: 5px 0;
+            font-size: 18px;
+            font-weight: bold;
+            width: 250px;
+        }
+
+        .modal-open:hover {
+            background-image: url("/images/akbg2.jpg")
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 2;
+            display: none;
+            animation: modal-open .5s;
+        }
+
+        .modal-content {
+            background-image: url("/images/akmbg.jpg");
+            margin-top: 55px;
+            width: 80%;
+             height: auto;
+            margin-bottom: auto;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 8px 24px;
+            border-radius: 10px;
+            z-index: 4;
+            position: relative;
+            transform: translateX(10rem);
+        }
+
+        .modal-header {
+            font-weight: 500;
+            padding: 10px 0;
+            font-size: 30px;
+            font-weight: 600;
+            color: rgb(153, 16, 16);
+            
+        }
+
+        .modal-header .modal-close {
+            float: right;
+            font-size: 20px;
+           background: none;
+           border: none;
+            padding: 5px 8px;
+            cursor: pointer;
+          
+        }
+
+        .modal-body {
+            color: #08073f;
+            font-size: 17px;
+            padding: 15px 0;
+            font-weight: 800;
+        }
+
+        .modal-footer {
+            padding: 15px 0;
+        }
+
+        .modal-footer .modal-close {
+            padding: 8px 16px;
+            font-size: 14px;
+            border: none;
+            outline: none;
+            background-image: url('/images/akmbbg.jpg');
+            border-radius: 5px;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+              text-transform: uppercase;
+        }
+
+        @keyframes modal-open {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+          
+
+  
+    </style>
+</head>
+
+<body>
+   
+    <div class="content">
+        <div class="vertical-bar">
+            <div class="search-icon">
+                <a href="/agriknowledge"><i class="fa fa-chevron-circle-left"></i></a>
+                <a href="/"><i class="fa fa-home"></i></a>
+    
+            </div>
+            <div class="social-icons">
+            </div>
+        </div>
+    </div>
+
+    <!-- container 01 -->
+    <div class="container"  >
+        <div class="image">
+            <img src="/images/kflrose.jpg">
+        </div>
+     
+            <h1 class="title"style="margin-left: 97px;">rose</h1>
+       
+        
+        <div class="info" >
+            <button class="modal-open" data-modal="modal1">CLIMATE & SOIL</button><br>
+            <button class="modal-open" data-modal="modal2">PLANTING & PROPAGATION</button><br>
+            <button class="modal-open" data-modal="modal3">PLANTING OF ROSE</button><br>
+            <button class="modal-open" data-modal="modal4">PLANT PROTECTION</button><br>
+        </div>
+    </div>
+
+    <!-- container 02 -->
+    <div class="container" >
+        <div class="image">
+            <img src="/images/kflmarigold.jpg" >
+        </div>
+        <h1 class="title" >marigold</h1>
+        <div class="info">
+            <button class="modal-open" data-modal="modal5">CLIMATE & SOIL</button><br>
+            <button class="modal-open" data-modal="modal6">SPECIES AND CULTIVAR</button><br>
+            <button class="modal-open" data-modal="modal7">LAND PREPARATION</button><br>
+            <button class="modal-open" data-modal="modal8">HARVESTING OF FLOWERS</button><br>
+        </div>
+    </div>
+
+    <!-- container 03 -->
+    <div class="container">
+        <div class="image">
+            <img src="/images/kflorchid.jpg">
+        </div>
+        <h1 class="title" style="margin-right: 17px;">orchid</h1>
+        <div class="info">
+            <button class="modal-open" data-modal="modal9">hello please, click here 9</button><br>
+            <button class="modal-open" data-modal="modal10">hello please, click here 10</button><br>
+            <button class="modal-open" data-modal="modal11">hello please, click here 11</button><br>
+            <button class="modal-open" data-modal="modal12">hello please, click here 12</button><br>
+        </div>
+    </div>
+
+    <!-- C01 M01 -->
+    <div class="modal" id="modal1">
+        <div class="modal-content">
+            <div class="modal-header">CLIMATE & SOIL
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+    
+            <div class="modal-body">It is generally suitable for higher elevation (1500 m and above). It can also be grown in the plains under ideal
+            condition of fertile loamy soils with salt-free irrigation water. The ideal climate for rose growing should have
+            temperature with a minimum of 15°C and maximum of 28°C. Light is important factor which decides the growth. The growth
+            is slowed by day length, i.e. > 12 hours and heavy overcast, cloudy/mist conditions. High relative humidity exposes the
+            plant to serious fungal diseases. In tropics the ideal temperature is 25°C – 30°C on sunny day and on cloudy day 18°C –
+            20°C. The optimum temperature should be 15°C – 18°C. These temperatures are extremely difficult to find and it’s
+            therefore to compromise.</div>
+            <div class="modal-footer">
+                <button class="link modal-close">CLOSE</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C01 M02 -->
+    <div class="modal" id="modal2">
+        <div class="modal-content">
+            <div class="modal-header">PLANTING & PROPAGATION
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+            <div class="modal-body">The crop can be propagated by rooted cuttings or by budding on Briar root stocks in hills and on Edward Rose and Rosa
+            indica in plains. One year old budded plants are planted in July - August at 75 cm x 75 cm spacing.</div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C01 M03 -->
+    <div class="modal" id="modal3">
+        <div class="modal-content">
+            <div class="modal-header">PLANTING OF ROSE
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+            <div class="modal-body">After cultivation<br>
+            The plants should be watered daily until they establish and thereafter once in a week. Pruning is done during March and
+            October. Spray Diuran 2.5 kg a.i/ha to control weeds. Avoid spray fluid coming in contact with Rose plants.<br><br>
+            
+           
+            Support of the plants<br>
+            Post is placed at internals of 3m on both sides of the bed. Along the sides of the bed, galvanized wires or plastic
+            string are fastened at the posts at 30cm – 40cm intervals to support the plant. Between the wires across the bed, thin
+            strings can be tied to keep the width of the beds constant.<br><br>
+            
+            Disbudding<br>
+            Varieties produce some side buds below the center bud. These side buds have to be removed or disbudded. The disbudding
+            must be done regularly and also as soon as possible in order to avoid large wounds in the upper leaf axil.</div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C01 M04 -->
+    <div class="modal" id="modal4">
+        <div class="modal-content">
+            <div class="modal-header">PLANT PROTECTION
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+     
+            <div class="modal-body">
+            
+            Disease : Important diseases of banana are:<br><br>
+            
+            Panama wilt:<br> It is caused by the soil bourne fungi Fusarium oxysporum.
+            Symptoms: Leaves become yellow, Pseudostem splits and breaks.
+            Control Measures: Eradication of the infected plants. Growing resistant varieties like Dwarf Cavendish. Soil drenching
+            with Vapam @ 0.85% and mercuric chloride @ 3000 PPM in nursery.<br><br>
+            
+
+            
+            Insect pests:- Important insect pests are:<br><br>
+            
+            Root stock weevil:- <br>Damaging stage is adult and grub
+            Symptoms of damage:- Grub bores into stem which is affected by fungi or bacteria.
+            Control measures: - Use healthy suckers and rhizomes. Before planting treat the pit with 0.65 %. Lindane 60-80 g/pit.
+            Soak the sucker in 0.1% Lindane solution, spray 0.05 % endosulfan.</div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C02 MO1 -->
+    <div class="modal" id="modal5">
+        <div class="modal-content">
+            <div class="modal-header">CLIMATE & SOIL
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+            <div class="modal-body">Climate:<br>
+            Marigold requires mild climate for luxuriant growth and flowering.
+            
+            The optimum temperature range for its profuse growth is 18-20°C.
+            
+            Temperatures above 35°C restrict the growth of the plants, which leads to reduction in flower size and number.
+            
+            In severe winter, plants and flowers are damaged by frost.<br><br>
+            
+            Soil:<br>
+            Marigold can be grown in a wide range of soils, as it is adapted in different soil types.
+            
+            French (Dwarf) marigolds are best cultivated in light soil whereas a rich well drained, moist soils are best suited
+            for African (Tall) marigolds.
+            
+            Sandy loam soil with pH 5.6 to 6.5 is ideal for its cultivation.</div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C02 M02 -->
+    <div class="modal" id="modal6">
+        <div class="modal-content">
+            <div class="modal-header">SPECIES AND CULTIVAR
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+            <div class="modal-body">Among 50 species of marigold only for are cultivated. These are<br><br>
+            
+            1. Tagetes erecta (African marigold): cultivating it for medicinal, ceremonial and decorative purposes. This plant
+            reaches heights of between 50–100 cm (20–39 in). The colour range is from white and cream to primose, yellow, gold and
+            orange.<br><br>
+            
+            2. Tagetes patula (French marigold): The flower is an annual, occasionally reaching 0.5 m by 0.3 m.. stem is reddish in
+            colour and the foliage is darker than African marigold. The colour of flower varies from yellow to red, either single or
+            double and borne on proportionately long peduncle.<br><br>
+            
+            3. Tagetes tenufolia( Syn. T. signata); it is a dwarf and bushy plant. Flowers have 5 rays, roundish and obovate with
+            spicy tarragon flavor.<br><br>
+            
+            4. Tagetes lucida (sweet scented marigold): The plants are tender, perennial, leaves are sessile, small and lanceolated.
+            Flowers are usually 2-3 rayed.</div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C02 M03 -->
+    <div class="modal" id="modal7">
+        <div class="modal-content">
+            <div class="modal-header">Modal 7
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+            <!-- <img src="animals.jpg" style="width: 150px; height: 120px;"> -->
+            <div class="modal-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid eos consectetur
+                ipsam, dolore unde aspernatur autem nisi non, facere ea earum dolorem exercitationem. Maxime odio magnam
+                eos optio quas, a ex! Obcaecati repudiandae a, adipiscnon quod consequatur similique esse voluptatum
+                necessitatibus omnis, velit sunt optio repellat doloribus fugit, unde labore autem voluptate? Officiis,
+                accusamus a inventore quia quae incidunt saepe et voluptatem hic expedita dolor soluta consequatur, non
+                blanditiis consequuntur iure. Eos, explicabo voluptatem? Suscipit excepturi, corporis esse velit sunt
+                nemo natus accusamus vero odio laboriosam ratione voluptates obcaecati minus autem ab dicta quae aliquid
+                non atque praesentium quibusdam dolorem ipsam nobis! Vel mollitia alias suscipit excepturi in libero
+                culpa illo voluptatem dolor distinctio? Quasi repellat ullam maiores obcaecati cumque molestias rem non
+                assumenda enim eveniet dolorem quaerat, totam laboriosam veritatis. Ab quisquam hic earum inventore
+                asperiores numquam veritatis, obcaecati minus labore nobis mollitia, optio reprehenderit. Esse sequi
+                nesciunt dolor doloremque perferendis! Explicabo nemo eos provident id! Aut nemo deleniti rem saepe
+                aliquam cupiditate aspernatur est maxime expedita libero placeat quibusdam facilis esse maiores commodi
+                exercitationem nobis, debitis nihil sed amet repellat nesciunt temporibus? Perferendis itaque et debitis
+                officia veritatis magnam rerum unde pariatur accusamus, vel iure nulla dolorem, totam deleniti minima,
+                illum quisquam! Est laborum doloremque nesciunt provident ducimus! Temporibus accusamus ad vero maxime,
+                natus quibusdam delectus optio! Dignissimos hic excepturi quam quis nemo id consectetur nulla quisquam
+                aliquid odio earum doloribus vel, molestiae dolorum quos quae minima ab veritatis dicta distinctio,
+                deserunt laborum.</div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C02 M04 -->
+    <div class="modal" id="modal8">
+        <div class="modal-content">
+            <div class="modal-header">Modal 8
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+            <div class="modal-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid eos consectetur
+                ipsam, dolore unde aspernatur autem nisi non, facere ea earum dolorem exercitationem. Maxime odio magnam
+                eos optio quas, a ex! Obcaecati repudiandae a, adipiscnon quod consequatur similique esse voluptatum
+                necessitatibus omnis, velit sunt optio repellat doloribus fugit, unde labore autem voluptate? Officiis,
+                accusamus a inventore quia quae incidunt saepe et voluptatem hic expedita dolor soluta consequatur, non
+                blanditiis consequuntur iure. Eos, explicabo voluptatem? Suscipit excepturi, corporis esse velit sunt
+                nemo natus accusamus vero odio laboriosam ratione voluptates obcaecati minus autem ab dicta quae aliquid
+                non atque praesentium quibusdam dolorem ipsam nobis! Vel mollitia alias suscipit excepturi in libero
+                culpa illo voluptatem dolor distinctio? Quasi repellat ullam maiores obcaecati cumque molestias rem non
+                assumenda enim eveniet dolorem quaerat, totam laboriosam veritatis. Ab quisquam hic earum inventore
+                asperiores numquam veritatis, obcaecati minus labore nobis mollitia, optio reprehenderit. Esse sequi
+                nesciunt dolor doloremque perferendis! Explicabo nemo eos provident id! Aut nemo deleniti rem saepe
+                aliquam cupiditate aspernatur est maxime expedita libero placeat quibusdam facilis esse maiores commodi
+                exercitationem nobis, debitis nihil sed amet repellat nesciunt temporibus? Perferendis itaque et debitis
+                officia veritatis magnam rerum unde pariatur accusamus, vel iure nulla dolorem, totam deleniti minima,
+                illum quisquam! Est laborum doloremque nesciunt provident ducimus! Temporibus accusamus ad vero maxime,
+                natus quibusdam delectus optio! Dignissimos hic excepturi quam quis nemo id consectetur nulla quisquam
+                aliquid odio earum doloribus vel, molestiae dolorum quos quae minima ab veritatis dicta distinctio,
+                deserunt laborum.</div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C03 M01 -->
+    <div class="modal" id="modal9">
+        <div class="modal-content">
+            <div class="modal-header">Modal 9
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+            <div class="modal-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid eos consectetur
+                ipsam, dolore unde aspernatur autem nisi non, facere ea earum dolorem exercitationem. Maxime odio magnam
+                eos optio quas, a ex! Obcaecati repudiandae a, adipiscnon quod consequatur similique esse voluptatum
+                necessitatibus omnis, velit sunt optio repellat doloribus fugit, unde labore autem voluptate? Officiis,
+                accusamus a inventore quia quae incidunt saepe et voluptatem hic expedita dolor soluta consequatur, non
+                blanditiis consequuntur iure. Eos, explicabo voluptatem? Suscipit excepturi, corporis esse velit sunt
+                nemo natus accusamus vero odio laboriosam ratione voluptates obcaecati minus autem ab dicta quae aliquid
+                non atque praesentium quibusdam dolorem ipsam nobis! Vel mollitia alias suscipit excepturi in libero
+                culpa illo voluptatem dolor distinctio? Quasi repellat ullam maiores obcaecati cumque molestias rem non
+                assumenda enim eveniet dolorem quaerat, totam laboriosam veritatis. Ab quisquam hic earum inventore
+                asperiores numquam veritatis, obcaecati minus labore nobis mollitia, optio reprehenderit. Esse sequi
+                nesciunt dolor doloremque perferendis! Explicabo nemo eos provident id! Aut nemo deleniti rem saepe
+                aliquam cupiditate aspernatur est maxime expedita libero placeat quibusdam facilis esse maiores commodi
+                exercitationem nobis, debitis nihil sed amet repellat nesciunt temporibus? Perferendis itaque et debitis
+                officia veritatis magnam rerum unde pariatur accusamus, vel iure nulla dolorem, totam deleniti minima,
+                illum quisquam! Est laborum doloremque nesciunt provident ducimus! Temporibus accusamus ad vero maxime,
+                natus quibusdam delectus optio! Dignissimos hic excepturi quam quis nemo id consectetur nulla quisquam
+                aliquid odio earum doloribus vel, molestiae dolorum quos quae minima ab veritatis dicta distinctio,
+                deserunt laborum.</div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C03 M02 -->
+    <div class="modal" id="modal10">
+        <div class="modal-content">
+            <div class="modal-header">Modal 10
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+         
+            <div class="modal-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid eos consectetur
+                ipsam, dolore unde aspernatur autem nisi non, facere ea earum dolorem exercitationem. Maxime odio magnam
+                eos optio quas, a ex! Obcaecati repudiandae a, adipiscnon quod consequatur similique esse voluptatum
+                necessitatibus omnis, velit sunt optio repellat doloribus fugit, unde labore autem voluptate? Officiis,
+                accusamus a inventore quia quae incidunt saepe et voluptatem hic expedita dolor soluta consequatur, non
+                blanditiis consequuntur iure. Eos, explicabo voluptatem? Suscipit excepturi, corporis esse velit sunt
+                nemo natus accusamus vero odio laboriosam ratione voluptates obcaecati minus autem ab dicta quae aliquid
+                non atque praesentium quibusdam dolorem ipsam nobis! Vel mollitia alias suscipit excepturi in libero
+                culpa illo voluptatem dolor distinctio? Quasi repellat ullam maiores obcaecati cumque molestias rem non
+                assumenda enim eveniet dolorem quaerat, totam laboriosam veritatis. Ab quisquam hic earum inventore
+                asperiores numquam veritatis, obcaecati minus labore nobis mollitia, optio reprehenderit. Esse sequi
+                nesciunt dolor doloremque perferendis! Explicabo nemo eos provident id! Aut nemo deleniti rem saepe
+                aliquam cupiditate aspernatur est maxime expedita libero placeat quibusdam facilis esse maiores commodi
+                exercitationem nobis, debitis nihil sed amet repellat nesciunt temporibus? Perferendis itaque et debitis
+                officia veritatis magnam rerum unde pariatur accusamus, vel iure nulla dolorem, totam deleniti minima,
+                illum quisquam! Est laborum doloremque nesciunt provident ducimus! Temporibus accusamus ad vero maxime,
+                natus quibusdam delectus optio! Dignissimos hic excepturi quam quis nemo id consectetur nulla quisquam
+                aliquid odio earum doloribus vel, molestiae dolorum quos quae minima ab veritatis dicta distinctio,
+                deserunt laborum.</div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C03 M03 -->
+    <div class="modal" id="modal11">
+        <div class="modal-content">
+            <div class="modal-header">Modal 11
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+            <div class="modal-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid eos consectetur
+                ipsam, dolore unde aspernatur autem nisi non, facere ea earum dolorem exercitationem. Maxime odio magnam
+                eos optio quas, a ex! Obcaecati repudiandae a, adipiscnon quod consequatur similique esse voluptatum
+                necessitatibus omnis, velit sunt optio repellat doloribus fugit, unde labore autem voluptate? Officiis,
+                accusamus a inventore quia quae incidunt saepe et voluptatem hic expedita dolor soluta consequatur, non
+                blanditiis consequuntur iure. Eos, explicabo voluptatem? Suscipit excepturi, corporis esse velit sunt
+                nemo natus accusamus vero odio laboriosam ratione voluptates obcaecati minus autem ab dicta quae aliquid
+                non atque praesentium quibusdam dolorem ipsam nobis! Vel mollitia alias suscipit excepturi in libero
+                culpa illo voluptatem dolor distinctio? Quasi repellat ullam maiores obcaecati cumque molestias rem non
+                assumenda enim eveniet dolorem quaerat, totam laboriosam veritatis. Ab quisquam hic earum inventore
+                asperiores numquam veritatis, obcaecati minus labore nobis mollitia, optio reprehenderit. Esse sequi
+                nesciunt dolor doloremque perferendis! Explicabo nemo eos provident id! Aut nemo deleniti rem saepe
+                aliquam cupiditate aspernatur est maxime expedita libero placeat quibusdam facilis esse maiores commodi
+                exercitationem nobis, debitis nihil sed amet repellat nesciunt temporibus? Perferendis itaque et debitis
+                officia veritatis magnam rerum unde pariatur accusamus, vel iure nulla dolorem, totam deleniti minima,
+                illum quisquam! Est laborum doloremque nesciunt provident ducimus! Temporibus accusamus ad vero maxime,
+                natus quibusdam delectus optio! Dignissimos hic excepturi quam quis nemo id consectetur nulla quisquam
+                aliquid odio earum doloribus vel, molestiae dolorum quos quae minima ab veritatis dicta distinctio,
+                deserunt laborum.</div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C03 M04 -->
+    <div class="modal" id="modal12">
+        <div class="modal-content">
+            <div class="modal-header">Modal 12
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+            <div class="modal-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid eos consectetur
+                ipsam, dolore unde aspernatur autem nisi non, facere ea earum dolorem exercitationem. Maxime odio magnam
+                eos optio quas, a ex! Obcaecati repudiandae a, adipiscnon quod consequatur similique esse voluptatum
+                necessitatibus omnis, velit sunt optio repellat doloribus fugit, unde labore autem voluptate? Officiis,
+                accusamus a inventore quia quae incidunt saepe et voluptatem hic expedita dolor soluta consequatur, non
+                blanditiis consequuntur iure. Eos, explicabo voluptatem? Suscipit excepturi, corporis esse velit sunt
+                nemo natus accusamus vero odio laboriosam ratione voluptates obcaecati minus autem ab dicta quae aliquid
+                non atque praesentium quibusdam dolorem ipsam nobis! Vel mollitia alias suscipit excepturi in libero
+                culpa illo voluptatem dolor distinctio? Quasi repellat ullam maiores obcaecati cumque molestias rem non
+                assumenda enim eveniet dolorem quaerat, totam laboriosam veritatis. Ab quisquam hic earum inventore
+                asperiores numquam veritatis, obcaecati minus labore nobis mollitia, optio reprehenderit. Esse sequi
+                nesciunt dolor doloremque perferendis! Explicabo nemo eos provident id! Aut nemo deleniti rem saepe
+                aliquam cupiditate aspernatur est maxime expedita libero placeat quibusdam facilis esse maiores commodi
+                exercitationem nobis, debitis nihil sed amet repellat nesciunt temporibus? Perferendis itaque et debitis
+                officia veritatis magnam rerum unde pariatur accusamus, vel iure nulla dolorem, totam deleniti minima,
+                illum quisquam! Est laborum doloremque nesciunt provident ducimus! Temporibus accusamus ad vero maxime,
+                natus quibusdam delectus optio! Dignissimos hic excepturi quam quis nemo id consectetur nulla quisquam
+                aliquid odio earum doloribus vel, molestiae dolorum quos quae minima ab veritatis dicta distinctio,
+                deserunt laborum.</div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/akfruits.js"></script>
+</body>
+
+</html>

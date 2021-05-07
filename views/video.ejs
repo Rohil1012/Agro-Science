@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- particular file css and js -->
+    <link rel="stylesheet" href="/css/video.css">
+    <link rel="stylesheet" href="/css/vbar.css">
+    <!-- font-awesome -->
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Videos</title>
+</head>
+
+<body>
+    <div class="content">
+        <div class="vertical-bar">
+            <div class="search-icon">
+                <a href="/"><i class="fa fa-chevron-circle-left"></i></a>
+                <a href="/"><i class="fa fa-home"></i></a>
+            </div>
+            <div class="social-icons">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1>
+            <center>AGRO-SCIENCE VIDEO</center>
+        </h1>
+        <div class="note" style="display: flex; text-align: center; justify-content: center;">
+            <i class="fa fa-exclamation-triangle" style="font-size: 30px; color: red;"></i>&nbsp;
+            <p style="color:aliceblue; font-size: 25px;">If you want to add videos so you can add your videos in videos section...</p >
+        </div>
+        <div id="video_player">
+            <video controls poster="" class="video" id="video">
+                <source src="/videos/v1.mp4" type="video/mp4">
+                <source src="/videos/v1.mp4" type="video/mp4">
+            </video>
+            
+            <div class="scrollBox" id="ecran">
+                    
+                    <!-- video 01 -->
+                    <div class="box">
+                        <img src="/images/v1.JPG">
+                        <div class="box-content">
+                            <a href="/videos/v1.mp4" class="btn">Watch</a>
+                        </div>
+                    </div>
+                     <!-- video 02 -->
+                    <div class="box">
+                        <img src="/images/v2.JPG">
+                        <div class="box-content">
+                            <a href="/videos/v2.mp4" class="btn">Watch</a>
+                        </div>
+                    </div>
+                    <!-- video 03 -->
+                    <div class="box">
+                        <img src="/images/v3.JPG">
+                        <div class="box-content">
+                            <a href="/videos/v3.mp4" class="btn">Watch</a>
+                        </div>
+                    </div>
+                    <!-- video 04 -->
+                    <div class="box">
+                        <img src="/images/v4.JPG">
+                        <div class="box-content">
+                            <a href="/videos/v4.mp4" class="btn">Watch</a>
+                        </div>
+                    </div>
+                    <!-- video 05 -->
+                    <div class="box">
+                        <img src="/images/v5.JPG">
+                        <div class="box-content">
+                            <a href="/videos/v5.mp4" class="btn">Watch</a>
+                        </div>
+                    </div>
+                    <!-- video 06 -->
+                    <div class="box">
+                        <img src="/images/v6.JPG">
+                        <div class="box-content">
+                            <a href="/videos/v6.mp4" class="btn">Watch</a>
+                        </div>
+                    </div>
+                    <!-- video 07 -->
+                    <div class="box">
+                        <img src="/images/v7.JPG">
+                        <div class="box-content">
+                            <a href="/videos/v7.mp4" class="btn">Watch</a>
+                        </div>
+                    </div>
+                    <!-- video 08 -->
+                    <div class="box">
+                        <img src="/images/v8.JPG">
+                        <div class="box-content">
+                            <a href="/videos/v8.mp4" class="btn">Watch</a>
+                        </div>
+                    </div>
+                    <!-- video 09 -->
+                    <div class="box">
+                        <img src="/images/v9.JPG">
+                        <div class="box-content">
+                            <a href="/videos/v9.mp4" class="btn">Watch</a>
+                        </div>
+                    </div>
+                    <!-- video 10 -->
+                    <div class="box">
+                        <img src="/images/v10.JPG">
+                        <div class="box-content">
+                            <a href="/videos/v10.mp4" class="btn">Watch</a>
+                        </div>
+                    </div>
+                    <!-- video 11 -->
+                    <div class="box">
+                        <img src="/images/v11.JPG">
+                        <div class="box-content">
+                            <a href="/videos/v11.mp4" class="btn">Watch</a>
+                        </div>
+                    </div>
+                    <!-- video 12 -->
+                    <div class="box">
+                        <img src="/images/v12.JPG">
+                        <div class="box-content">
+                            <a href="/videos/v12.mp4" class="btn">Watch</a>
+                        </div>
+                    </div>
+                    <!-- video 13 -->
+                    <div class="box">
+                        <img src="/images/v13.JPG">
+                        <div class="box-content">
+                            <a href="/videos/v13.mp4" class="btn">Watch</a>
+                        </div>
+                    </div>
+                    <!-- video 14 -->
+                    <div class="box">
+                        <img src="/images/v14.JPG">
+                        <div class="box-content">
+                            <a href="/videos/v14.mp4" class="btn">Watch</a>
+                        </div>
+                    </div>
+                    <!-- video 15 -->
+                    <div class="box">
+                        <img src="/images/v15.JPG">
+                        <div class="box-content">
+                            <a href="/videos/v15.mp4" class="btn">Watch</a>
+                        </div>
+                    </div>
+                    <!-- video 16 -->
+                    <div class="box">
+                        <img src="/images/v16.JPG">
+                        <div class="box-content">
+                            <a href="/videos/v16.mp4" class="btn">Watch</a>
+                        </div>
+                    </div>
+
+
+                </div>
+        </div>
+    </div>
+
+
+    <!-- script for video player -->
+
+    <script type="text/javascript">
+        let anchors = document.querySelectorAll('div .btn');
+        let links = [...anchors];
+
+        for (let i = 0; i < links.length; i++) {
+            links[i].onclick = handler;
+        }
+        function handler(e) {
+            e.preventDefault();
+            let videotarget = this.getAttribute("href");
+            let filename = videotarget.substr(0, videotarget.lastIndexOf('.'));
+            let video = document.getElementById("video");
+            video.removeAttribute("poster");
+            let source = document.querySelectorAll("#video_player video source");
+            source[0].src = filename + ".mp4";
+            source[1].src = filename + ".m4v";
+            video.load();
+            video.play();
+        }
+    </script>
+    <!-- script for verticle scroll bar -->
+    <script type='text/javascript'>
+        function ScrollDiv() {
+
+            if (document.getElementById('ecran').scrollTop < (document.getElementById('ecran').scrollHeight - document.getElementById('ecran').offsetHeight)) {
+                -1
+                document.getElementById('ecran').scrollTop = document.getElementById('ecran').scrollTop + 1
+            }
+            else { document.getElementById('ecran').scrollTop = 0; }
+        }
+
+        setInterval(ScrollDiv, 40);
+    </script>
+
+</body>
+
+</html>

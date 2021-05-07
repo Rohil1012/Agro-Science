@@ -1,0 +1,120 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Boogaloo&display=swap');
+
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin     : 0;
+    padding    : 0;
+    box-sizing : border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    display            : flex;
+    justify-content    : center;
+    align-items        : center;
+    min-height         : 100vh;
+    background         : #1b1e21;
+    /* background-color: #fff; */
+}
+
+body::before {
+    content   : '';
+    position  : fixed;
+    top       : 0;
+    left      : 0;
+    width     : 100%;
+    height    : 100%;
+    background: linear-gradient(#0c645e, #012926);
+    clip-path : circle(30% at right 85%);
+}
+
+
+
+.container {
+    position       : relative;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    flex-wrap      : wrap;
+    z-index        : 1;
+    margin-left: 70px;
+}
+
+.container .card {
+    position     : relative;
+    width        : 1000px;
+    height       : 100%;
+    margin       : 50px;
+    box-shadow   : 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    background   : rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items    : center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.container .card .content{
+    padding: 20px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&family=Poppins:wght@200&family=Roboto:wght@300&display=swap');
+.container .card .content h2{
+    position: absolute;
+    top: -7px;
+    right: 30px;
+    font-size: 5em;
+    color: rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+    font-family: 'Coda Caption', sans-serif;
+}
+
+
+.container .card .content h1{
+    font-size: 2.8em;
+    color: #44be5f;
+   font-family: 'Boogaloo', cursive;
+    text-align: center;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+.container .card .content h3{
+    font-size: 1.4em;
+    color: #ffce63;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family:  'Permanent Marker', cursive;
+    padding-top: 13px;
+
+}
+
+.container .card .content p{
+    font-size: 1.2em;
+    color: #f3f3f3;
+    font-weight: 600px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.container .card .content a{
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px;
+    margin-top: 15px;
+    background: #fff;
+    color: #0000EE;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 1000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}

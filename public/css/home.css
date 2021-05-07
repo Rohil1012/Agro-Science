@@ -1,0 +1,1022 @@
+* {
+    margin     : 0;
+    padding    : 0;
+    font-family: sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height                  : 100vh;
+    background-color        : #1b1e21;
+    background-position     : center;
+    background-size         : cover;
+    overflow-x              : hidden;
+    background-attachment   : fixed;
+    display                 : block;
+    position                : relative;
+}
+
+
+/* ......................NAVBAR.............................. */
+
+.nav-bar {
+    display                      : flex;
+    padding                      : 20px 120px;
+
+}
+
+.nav-logo img {
+    position: relative;
+    top:-6px;
+    left: 10px;
+    width: 85px;
+}
+
+.nav-links {
+    flex: 1;
+}
+
+.nav-links ul {
+    margin-left: 50px;
+    display    : inline;
+}
+
+.nav-links ul li {
+    list-style    : none;
+    display       : inline-block;
+    padding       : 15px 25px;
+    text-transform: uppercase;
+}
+
+.nav-links ul a {
+    color          : #fff;
+    text-decoration: none;
+    font-size      : 18px;
+}
+
+.nav-links ul li::after {
+    content   : '';
+    width     : 0;
+    height    : 2px;
+    background: #53c4bc;
+    display   : block;
+    margin    : auto;
+    transition: .3s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+
+.nav-links a.active {
+    color      : #0c645e;
+    font-weight: 600;
+}
+
+
+.f2 {
+    display: none;
+}
+
+.nav-links ul li:hover .f2 {
+    display    : block;
+    position   : relative;
+    margin-left: 10px;
+    cursor     : pointer;
+}
+
+.nav-links ul li:hover .f2 ul {
+    width           : 225px;
+    display         : block;
+    position        : absolute;
+    margin          : 15px;
+    background-color: #0c645e;
+    cursor          : pointer;
+    text-align      : left;
+    border-radius   : 10px;
+    z-index         : 1;
+}
+
+
+/* ......................lOGIN/REGISTER  BUTTON...................... */
+
+.btn {
+    padding         : 13px 20px;
+    border          : 0;
+    background-image: linear-gradient(to left, #0c645e, #53c4bc, #0c645e);
+    font-weight     : bold;
+    cursor          : pointer;
+    transition      : .3s;
+    background-size : 200%;
+    border-radius   : 8px;
+    color           : black;
+    outline         : none;
+    position: relative;
+    right: -50px;
+}
+
+.btn:hover {
+    background-position: right;
+}
+
+.nav-links .btn {
+    float: right;
+}
+
+/* ..............................KNOW MORE BUTTON........................ */
+
+.btn1 {
+    padding         : 10px 15px;
+    border: 0;
+    background-image: linear-gradient(to left, #0c645e, #53c4bc, #0c645e);
+    font-weight     : bold;
+    cursor          : pointer;
+    transition      : .3s;
+    background-size : 200%;
+    border-radius   : 5px;
+    color           : black;
+    outline         : none;
+}
+
+.btn1:hover {
+    background-position: right;
+}
+
+/* ..........................BANNER TITLE............................ */
+
+.banner-title {
+    margin       : 30px 130px;
+    margin-bottom: 50px;
+    color        : #fff;
+    /* text-align: center; */
+}
+
+/* ...........................BANNER HOME IMAGE.......................... */
+
+
+.banner-title .homeimg {
+    float     : right;
+    margin-top: -10%;
+    height: 400px;
+}
+
+.banner-title h1 {
+    font-size       : 55px;
+    margin-bottom   : 30px;
+    /* text-align   : center; */
+}
+
+.banner-title p {
+    font-size       : 20px;
+    margin-bottom   : 20px;
+    /* text-align   : center; */
+    color           : #2eb863;
+    line-height     : 1.4;
+}
+
+.banner-title h1 span {
+    color: #f86327;
+}
+
+
+/* ........................VERTICAL BAR............. */
+
+
+.vertical-bar {
+    height       : 100%;
+    background   : #0c645e;
+    top          : 0;
+    left         : 0;
+    /* position  : absolute; */
+    position     : fixed;
+}
+
+.search-icon {
+    height     : 10%;
+    width      : 80px;
+    position   : relative;
+    top        : -30px;
+    /* padding : -50px 0px; */
+}
+
+.search-icon .fa {
+    margin   : 50px 25px;
+    display  : block;
+    color    : #fff;
+    font-size: 30px;
+    cursor   : pointer;
+    position : sticky;
+}
+
+.social-icons {
+    height     : 8.8%;
+    width      : 80px;
+    background : #53c4bc;
+    text-align : center;
+    padding-top: 27%;
+    position   : fixed;
+    top        : 53%;
+}
+
+
+.nav-bar .fa {
+    display: none;
+}
+
+.all-content {
+    margin-left : 7%;
+    margin-right: 2%;
+}
+
+/* .............................ABOUT SECTION CSS....................................... */
+
+.extra h1 {
+    color        : #ffce63;
+    margin-left  : 60px;
+    font-size    : 60px;
+    font-weight  : 600;
+    margin-top   : -60px;
+    border-bottom: 4px solid #0c645e;
+    width        : 40%;
+}
+
+.extra img {
+    margin-right             : 5px;
+    animation-name           : rotateme;
+    animation-duration       : 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    width                    : 45px;
+    height                   : auto;
+}
+
+@keyframes rotateme {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(3turn);
+    }
+}
+
+.about {
+    height         : 600px;
+    padding        : 50px;
+    display        : flex;
+    flex-direction : row;
+    justify-content: space-evenly;
+    align-items    : center;
+}
+
+.aboutText {
+    position: relative;
+    padding : 0.50px;
+    height  : inherit;
+    width: 300px;
+    margin-left: 50px;
+}
+
+.aboutText img {
+    position: absolute;
+    width   : 30vw;
+    top     : -5px;
+    left    : -130px;
+}
+
+
+/* .............. */
+
+.aboutlist h1 {
+    position: relative;
+    top : -92px;
+    left    : 26px;
+    color   : #53c4bc;
+    width: 400px;
+    display: inline;
+    font-size: 2.5vw;
+   
+}
+
+.aboutlist {
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+ol {
+    position: relative;
+    top: -36px;
+    list-style: none;
+    color     : #53c4bc;
+}
+
+ol li {
+    font-size    : 34px;
+    position     : relative;
+    margin-bottom: 20px;
+    border-bottom: 1px solid gray;
+}
+
+li p {
+    font-size   : 19px;
+    color       : #fff;
+    padding-left: 60px;
+    line-height : 30px;
+    opacity     : 0.6;
+}
+
+li span {
+    position   : absolute;
+    line-height: 25px;
+    font-weight: 600;
+}
+
+
+/* ...........................CATEGORIES SECTION........................................*/
+
+.categories {
+    height: 1000px;
+    margin: 40px;
+}
+
+.header {
+    text-align   : center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    color    : #fff;
+    font-size: 30px;
+}
+
+/* .................above 3 cards..... */
+
+.cards {
+    display        : flex;
+    flex-direction : row;
+    justify-content: space-around;
+    align-items    : center;
+    padding        : 40px 0 40px 0;
+}
+
+/* .......... below 2 cards............. */
+
+.cards1 {
+    display        : flex;
+    flex-direction : row;
+    justify-content: space-around;
+    align-items    : center;
+    padding        : 40px 0 40px 0;
+}
+
+/* ................first card.......... */
+
+.cards .card1 {
+    position     : relative;
+    height       : 340px;
+    width        : 320px;
+    background   : #fff;
+    box-shadow   : -5px 10px 22px #666666, -5px 10px 10px #666666;
+    border-radius: 20px;
+}
+/* .................second card............. */
+
+.cards .card2 {
+    position     : relative;
+    height       : 340px;
+    width        : 320px;
+    background   : #fff;
+    box-shadow   : -5px 10px 22px #666666, -5px 10px 10px #666666;
+    border-radius: 20px;
+}
+
+/* ..................third card........... */
+
+.cards .card3 {
+    position     : relative;
+    height       : 340px;
+    width        : 320px;
+    background   : #fff;
+    box-shadow   : -5px 10px 22px #666666, -5px 10px 10px #666666;
+    border-radius: 20px;
+}
+/* .............fourth card........ */
+
+.cards1 .card4 {
+    position     : relative;
+    height       : 340px;
+    width        : 320px;
+    background   : #fff;
+    box-shadow   : -5px 10px 22px #666666, -5px 10px 10px #666666;
+    border-radius: 20px;
+}
+
+/* ..................fifth card........ */
+
+.cards1 .card5 {
+    position     : relative;
+    height       : 340px;
+    width        : 320px;
+    background   : #fff;
+    box-shadow   : -5px 10px 22px #666666, -5px 10px 10px #666666;
+    border-radius: 20px;
+}
+
+.cards .card1 .card1img {
+    width   : 170px;
+    position: absolute;
+    top     : -50px;
+    right   : -30px;
+}
+
+.cards .card2 .card2img {
+    width   : 230px;
+    position: absolute;
+    top     : -50px;
+    right   : -30px;
+}
+
+.cards .card3 .card3img {
+    width   : 230px;
+    position: absolute;
+    top     : -50px;
+    right   : -50px;
+}
+
+.cards1 .card4 .card4img {
+    width   : 250px;
+    position: absolute;
+    top     : -30px;
+    right   : -30px;
+}
+
+.cards1 .card5 .card5img {
+    width   : 170px;
+    position: absolute;
+    top     : -30px;
+    right   : -30px;
+}
+
+.cardbgone {
+    height          : 150px;
+    background-color: #53c4bc;
+}
+
+.cardbgtwo {
+    height          : 150px;
+    background-color: #ffce63;
+}
+
+.cardbgthree {
+    height          : 150px;
+    background-color: #53c4bc;
+}
+
+.cardbgfour {
+    height          : 150px;
+    background-color: #0c645e;
+}
+
+.cardbgfive {
+    height          : 150px;
+    background-color: #0c645e;
+}
+
+.cardcontent {
+    padding: 169px 20px;
+}
+
+.cardcontent h2 {
+    font-weight: 600;
+}
+
+.cardcontent p {
+    line-height: 30px;
+    color      : #0c645e;
+    opacity    : 0.6;
+}
+
+.cardcontent .cardbtn {
+    position        : absolute;
+    right           : 20px;
+    padding         : 10px;
+    background-color: #ededed;
+    width           : 25px;
+    height          : 20px;
+    border-radius   : 6px;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    transition      : all ease-in-out 0.2s;
+}
+
+.cardcontent .cardbtn:hover {
+    background-color: #53c4bc;
+}
+
+.cardcontent .cardbtn .cardicon {
+    position: relative;
+    top     : 0px;
+    left    : 0px;
+    width   : 20px;
+}
+
+/* .......................CONTACT SECTION..................................... */
+
+.container {
+    position          : relative;
+    top: -30px;
+    width             : 100%;
+    display           : flex;
+    justify-content   : center;
+    align-items       : center;
+    flex-wrap         : wrap;
+    padding           : 30px;
+    /* background     : #0c645e; */
+    /* margin            : 60px; */
+    margin-top: 50px;
+    height            : 350px;
+    border-radius     : 10px;
+}
+
+.container .cardcontact {
+    position      : relative;
+    max-width     : 300px;
+    height        : 215px;
+    background    : #53c4bc;
+    margin        : 30px 10px;
+    padding       : 20px 15px;
+    display       : flex;
+    flex-direction: column;
+    /* box-shadow : 0 5px 202px #0c645e; */
+    transition    : 0.3s ease-in-out;
+    cursor        : pointer;
+    border-radius : 5px;
+}
+
+.container .cardcontact:hover {
+    height: 360px;
+}
+
+.container .cardcontact .imgBx {
+    position: relative;
+    width   : 260px;
+    height  : 260px;
+    top     : -60px;
+    left    : 22px;
+}
+
+.container .cardcontact .imgBx img {
+    max-width    : 100%;
+    border-radius: 4px;
+}
+
+.container .cardcontact .content {
+    position  : relative;
+    margin-top: -140px;
+    padding   : 15px 15px;
+    text-align: center;
+    color     : #111;
+    visibility: hidden;
+    opacity   : 0;
+    transition: 0.3s ease-in-out;
+}
+
+.container .cardcontact:hover .content {
+    visibility      : visible;
+    opacity         : 1;
+    margin-top      : -40px;
+    transition-delay: 0.2s;
+}
+
+.container .cardcontact .content h2 {
+    color      : #000;
+    font-size  : 30px;
+    font-weight: 600;
+}
+
+.container .cardcontact .content a {
+    color          : #640c12;
+    font-size      : 20px;
+    padding        : 5px 0;
+    text-decoration: none;
+    /* float       : left; */
+
+}
+
+.container .cardcontact .content p {
+    color    : #fff;
+    font-size: 18px;
+    padding  : 5px 0;
+}
+
+.container .cardcontact .content .fa {
+    color    : #0c645e;
+    font-size: 23px;
+    padding  : 0 5px;
+    /* float : left; */
+}
+
+.container .cardcontact .content .link-git .fa {
+    color    : #000;
+    font-size: 35px;
+    padding  : 10px 20px;
+}
+
+/* ******************************************************************************************************************************** */
+
+
+@media (max-width: 1220px) {
+    .vertical-bar {
+        display: none;
+    }
+
+    .all-content {
+        margin-left: 0;
+    }
+
+    .banner-title {
+        margin: 80px 40px;
+    }
+
+    .nav-bar {
+        display                      : flex;
+        padding                      : 20px 20px;
+        /* position                  : sticky;
+        top                          : 0;
+        z-index                      : 1; */
+    }
+}
+
+@media (max-width: 1020px) {
+    .nav-links ul li {
+        list-style    : none;
+        display       : inline-block;
+        padding       : 15px 10px;
+        text-transform: uppercase;
+    }
+
+    .nav-links ul a {
+        color          : #fff;
+        text-decoration: none;
+        font-size      : 16px;
+    }
+
+    .nav-links ul li:hover .f2 ul {
+        width: 150px;
+    }
+}
+
+@media (max-width: 778px) {
+
+    .vertical-bar {
+        display: none;
+    }
+
+    .all-content {
+        align-items    : center;
+        justify-content: center;
+        text-align     : center;
+        max-width      : 100%;
+        margin-top     : -50%;
+    }
+
+    .extra h1 {
+        margin-left: 100px;
+        margin-top : -30px;
+        width      : 80%;
+    }
+
+    .extra img {
+        margin-bottom: 5%;
+    }
+
+    .banner-title {
+        flex-direction : column-reverse;
+        margin         : 60px 40px;
+        height         : 750px;
+        align-items    : center;
+        justify-content: center;
+        text-align     : center;
+    }
+
+    .banner-title img {
+        margin-right: -70%;
+    }
+
+    .banner-title h1 {
+        font-size: 7vw;
+        margin   : 0 !important;
+    }
+
+    .banner-title p {
+        font-size: 16px;
+    }
+
+    .banner-title .btn1 {
+        margin: 0 auto;
+    }
+
+    .nav-bar {
+        padding: 10px 30px;
+    }
+
+    .nav-links ul li {
+        list-style    : none;
+        display       : inline-block;
+        padding       : 10px 25px;
+        text-transform: uppercase;
+    }
+
+    .nav-links ul a {
+        color          : #fff;
+        text-decoration: none;
+        font-size      : 18px;
+    }
+
+    .fa-bars {
+        position: fixed;
+        right   : 20px;
+        top     : 10px;
+    }
+
+    .nav-bar .fa {
+        display  : block;
+        color    : #fff;
+        margin   : 10px 25px;
+        font-size: 22px;
+        cursor   : pointer;
+    }
+
+    .nav-links {
+        height           : 100vh;
+        width            : 100%;
+        background       : #0c645e;
+        top              : -850px;
+        right            : 0;
+        position         : fixed;
+        text-align       : center;
+        z-index          : 2;
+        transition       : all 0.5s;
+        /* margin-top    : 12%; */
+        /* position      : fixed;
+        width            : 100%;
+        height           : 100vh;
+        background       : #0c645e;
+        top              : 0;
+        right            : -100%;
+        text-align       : center;
+        transition       : all 0.5s;
+        z-index          : 2; */
+    }
+
+    .nav-links ul li:hover .f2 {
+        position   : relative;
+        margin-left: 0;
+        cursor     : pointer;
+    }
+
+    .nav-links ul li:hover .f2 ul {
+        width           : 200px;
+        position        : relative;
+        margin          : 10px;
+        background-color: #53c4bc;
+        cursor          : pointer;
+        text-align      : left;
+        border-radius   : 10px;
+    }
+
+    .nav-links ul li:hover .f2 ul li a {
+        color: black;
+    }
+
+    .nav-links ul li ::after {
+        height    : 2px;
+        background: #0c645e;
+    }
+
+    .active {
+        display: none;
+    }
+
+   
+    .nav-links a.active {
+        color      : #fff;
+        font-weight: normal;
+    }
+
+  
+
+    .btn {
+        background-image: linear-gradient(to left, #640c12, #934247, #640c12);
+    }
+
+    .nav-links ul a {
+        display: block;
+    }
+
+    .nav-links .btn {
+        float       : none;
+        margin-left : 15px;
+        margin-right: 25px;
+        margin-top  : 10px;
+    }
+
+    .about {
+        height         : auto;
+        padding        : 0px;
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+        text-align     : center;
+    }
+
+    .aboutText {
+        padding: 0 50px;
+        height : 100px;
+    }
+
+    .aboutText h1 {
+        left     : 540px;
+        font-size: 6vw;
+    }
+
+    .aboutText img {
+        width: 110vw;
+        top  : 100px;
+        left : 440px;
+    }
+
+    .aboutlist {
+        width: 75%;
+    }
+
+    ol li {
+        font-size: 26px;
+    }
+
+    ol li span {
+        font-size: 26px;
+        display  : none;
+    }
+
+    li p {
+        font-size: 14px;
+    }
+
+    .categories {
+        height: auto;
+    }
+
+    .header {
+        text-align: center;
+        margin    : 40px 0;
+    }
+
+    .header h1 {
+        text-align: center;
+        margin-top: 10%;
+    }
+
+    .cards {
+        display        : flex;
+        flex-direction : column;
+        padding        : 50px;
+        justify-content: center;
+        align-items    : center;
+        text-align     : center;
+        margin-left    : 540px;
+    }
+
+    .cards1 {
+        display        : flex;
+        flex-direction : column;
+        padding        : 50px;
+        justify-content: center;
+        align-items    : center;
+        text-align     : center;
+        margin-left    : 540px;
+    }
+
+    .cards .card1 {
+        margin-bottom: 60px;
+    }
+
+    .cards .card2 {
+        margin-bottom: 60px;
+    }
+
+    .cards .card3 {
+        margin-bottom: 60px;
+    }
+
+    .cards1 .card4 {
+        margin-bottom: 60px;
+    }
+
+    .cards1 .card5 {
+        margin-bottom: 60px;
+    }
+}
+
+
+@media (max-width: 647px) {
+    .container {
+        position       : relative;
+        display        : grid;
+        justify-content: center;
+        align-items    : center;
+    }
+
+    .extra h1 {
+        margin-left  : 100px;
+        margin-top   : -30px;
+        width        : 100%;
+        font-size    : 10vw;
+        margin-bottom: 8%;
+    }
+
+    .banner-title {
+        flex-direction : column-reverse;
+        display        : block;
+        margin         : 60px -50px;
+        height         : 750px;
+        align-items    : center;
+        justify-content: center;
+        text-align     : center;
+    }
+
+    .banner-title h1 {
+        font-size: 7vw;
+        margin   : 0 !important;
+    }
+
+    .banner-title img {
+        margin-right: -70%;
+    }
+
+    .banner-title p {
+        font-size: 16px;
+    }
+
+    .banner-title .btn1 {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 532px) {
+    .banner-title img {
+        margin-right: -30%;
+    }
+
+    .banner-title {
+        display: contents;
+    }
+
+    .all-content {
+        margin-top: 20%;
+    }
+
+    .banner-title h1 {
+        font-size: 50px;
+    }
+
+    .banner-title p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 380px) {
+    .banner-title {
+        margin    : 40px 40px;
+        text-align: center;
+    }
+
+    .banner-title h1 {
+        font-size : 30px;
+        text-align: center;
+    }
+
+    .banner-title p {
+        font-size : 12px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 265px) {
+    .nav-links {
+        height    : 100%;
+        width     : 200px;
+        background: #0c645e;
+        top       : 0;
+        right     : -500px;
+        position  : fixed;
+        text-align: left;
+        z-index   : 2;
+        transition: all 0.5s;
+    }
+}

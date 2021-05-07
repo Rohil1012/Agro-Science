@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Home</title>
+
+  <!-- particular file css and js -->
+  <link rel="stylesheet" href="/css/home.css">
+  <!-- font-awesome -->
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- abimation css -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="nav-bar" id="home">
+    <div class="nav-logo">
+      <img src="/images/hlogo.png" alt="">
+    </div>
+    <div class="nav-links" id="nav-links">
+      <i class="fa fa-close" onclick="closeMenu()"></i>
+      <ul>
+        <a href=" #" class="active">
+          <li>Home</li>
+        </a>
+        <a href="#A">
+          <li>About</li>
+        </a>
+        <a href="#C">
+          <li>Categories
+            <div class="f2">
+              <ul>
+                <li><a href="#card1">Daily price</a></li>
+                <li><a href="#card2">Agri Videos</a></li>
+                <li><a href="#card3">Farmer-Query</a></li>
+                <li><a href="#card4">Gov. Schemes </a></li>
+                <li><a href="#card5">Agri knowledge </a></li>
+              </ul>
+            </div>
+          </li>
+        </a>
+        <a href="#D">
+          <li>Contact</li>
+        </a>
+      </ul>
+      <% if(user) { %>
+        <button type="button" class="btn" onclick="logout()">LOGOUT</button>
+
+        <% } else {%>
+          <button type="button" class="btn" onclick="navigate()">LOGIN / REGISTER</button>
+          <% } %>
+    </div>
+    <i class="fa fa-bars" onclick="showMenu()"></i>
+  </div>
+  <div class="content">
+    <div class="banner-title" data-aos="fade-up" data-aos-duration="1000">
+      <img src="/images/hhome.png" alt="" class="homeimg" data-aos="fade-up-left" data-aos-duration="2000">
+      <h1><span>AGROSCIENCE</span> - <br>Change The Way You Trade...</h1>
+      <p>AGROSCIENCE IS TO HELP FARMERS BY PROVIDING <br>ALL KINDS AGRICULTURE RELATED INFORMATION IN THE WEBSITE
+      </p>
+      <a href="#A"><button type="button" class="btn1">Know More...</button></a>
+
+    </div>
+    <div class="vertical-bar">
+      <div class="search-icon">
+        <a href="#home" style="text-decoration: none;"><i class="fa fa-home"></i></a>
+        <a href="#A" style="text-decoration: none;"><i class="fa fa-user"></i></a>
+        <a href="#C" style="text-decoration: none;"><i class="fa fa-caret-square-o-down"></i></a>
+        <a href="#D" style="text-decoration: none;"><i class="fa fa-phone"></i></a>
+      </div>
+      <div class="social-icons">
+      </div>
+    </div>
+  </div>
+  <div class="all-content">
+
+          <!--.......................... ABOUT SECTION......................................... -->
+        <div class="sizebox1" id="A" style="height: 10px;"></div>
+        <div class="extra" id="A" data-aos="zoom-out-right" data-aos-duration="2000">
+      <img src="/images/hdownload.png" alt="">
+      <h1>About Us...</h1>
+        </div>
+
+        <div class="about">
+
+
+      <div class="aboutText">
+
+        <img src="/images/habout.png" alt="" data-aos="fade-down" data-aos-duration="1700">
+
+      </div>
+
+
+
+
+      <div class="aboutlist" data-aos="fade-left" data-aos-duration="800">
+
+        <h1>Why Agro-science is<span style="color:#fff;font-size: 2.5vw;"> Important ?</span></h1>
+        <ol>
+
+
+
+          <li><span>01</span>
+            <p>Agriculture, with its allied sectors, is unquestionably the largest livelihood provider in
+              India, more so in the vast rural areas</p>
+          </li>
+          <li><span>02</span>
+            <p>Sustainable agriculture, in terms of food security, rural employment, and environmentally
+              sustainable technologies such as soil conservation, sustainable natural resource management
+              and biodiversity protection, are essential for holistic rural development.</p>
+          </li>
+          <li><span>03</span>
+            <p>It also contributes a significant figure to the Gross Domestic Product (GDP).</p>
+          </li>
+
+        </ol>
+      </div>
+        </div>
+
+
+          <!-- ..........................CATEGORIES SECTION.................................... -->
+
+          <div class="extra" id="C" data-aos="zoom-out-right" data-aos-duration="2000">
+      <img src="/images/hdownload.png" alt="">
+      <h1>Categories...</h1>
+          </div>
+
+          <div class="categories">
+      <div class="header" data-aos="fade-right" data-aos-duration="800">
+        <h1>Today's <span style="color: #53c4bc; font-size: 2.5vw;">Mandi Prices , Agriculture Videos </span> &
+          Many more...</h1>
+      </div>
+      <div class="cards">
+        <div class="card1" data-aos="fade-up" data-aos-duration="800">
+          <img src="/images/card1.png" class="card1img" alt="" id="card1" data-aos="fade-down" data-aos-duration="900">
+          <div class="cardbgone">
+            <div class="cardcontent">
+              <h2>See Daily Prices</h2>
+              <p>The government formulated price for agri. produce to secure remunerative prices.</p>
+              <a href="/data">
+                <div class="cardbtn">
+                  <img src="/images/hnext.png" alt="" class="cardicon">
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="card2" data-aos="fade-up" data-aos-duration="1000">
+          <img src="/images/card2.png" class="card2img" id="card2" alt="" data-aos="fade-down" data-aos-duration="900">
+          <div class="cardbgtwo">
+            <div class="cardcontent">
+              <h2>Watch Agri Videos</h2>
+              <p>Agriculture is the science, art and practice of cultivating plants and livestock. </p>
+              <a href="/video">
+                <div class="cardbtn">
+                  <img src="/images/hnext.png" alt="" class="cardicon">
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="card3" data-aos="fade-up" data-aos-duration="1300">
+          <img src="/images/card3.png" class="card3img" id="card3" alt="" data-aos="fade-down" data-aos-duration="1000">
+          <div class="cardbgthree">
+            <div class="cardcontent">
+              <h2>Agri. Query?</h2>
+              <p>Queries of Indian Farmers will be answered on This Website by Agroscience. </p>
+              <a href="/index">
+                <div class="cardbtn">
+                  <img src="/images/hnext.png" alt="" class="cardicon">
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cards1">
+        <div class="card4" data-aos="fade-up" data-aos-duration="1500">
+          <img src="/images/card4.png" class="card4img" alt="" id="card4" data-aos="fade-down" data-aos-duration="1400">
+          <div class="cardbgfour">
+            <div class="cardcontent">
+              <h2>See Government Schemes</h2>
+              <p>Government Schemes in India are launched by the government to addres </p>
+              <a href="/map">
+                <div class="cardbtn">
+                  <img src="/images/hnext.png" alt="" class="cardicon">
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card5" data-aos="fade-up" data-aos-duration="1700">
+          <img src="/images/card5.png" class="card5img" alt="" id="card5" data-aos="fade-down" data-aos-duration="1500">
+          <div class="cardbgfive">
+            <div class="cardcontent">
+              <h2>Watch Agri-knowledge</h2>
+              <p>AgriKnowledge provides access to key information for agricultural development. </p>
+              <a href="/agriknowledge">
+                <div class="cardbtn">
+                  <img src="/images/hnext.png" alt="" class="cardicon">
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+          </div>
+
+          <!-- ..........................CONTACTUS SECTION.................................... -->
+
+          <div class="extra" id="D" data-aos="zoom-out-right" data-aos-duration="2500">
+      <img src="/images/hdownload.png" alt="">
+      <h1>Contact Us...</h1>
+          </div>
+          <div class="container">
+      <div class="cardcontact" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine"
+        data-aos-duration="1000">
+        <div class="imgBx">
+          <img src="/images/developer.jpg" alt="">
+        </div>
+        <div class="content" data-aos="zoom-in" data-aos-duration="100">
+          <h2>Developer 1</h2>
+          <a href=""><i class="fa fa-envelope" target="blank"></i>xyz12@gmail.com</a>
+          <a href="#" class="link-git" target="blank"><i class="fa fa-linkedin-square"></i></a>
+          <a href="#" class="link-git" target="_blank"><i class="fa fa-github"></i></a>
+        </div>
+      </div>
+      <div class="cardcontact" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+        <div class="imgBx">
+          <img src="/images/D1.jpg" alt="">
+        </div>
+        <div class="content" data-aos="zoom-in" data-aos-duration="100">
+          <h2>Developer 2</h2>
+          <a href="#"><i class="fa fa-envelope"></i>pqr34@gmail.com</a>
+          <a href="#" class="link-git" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+          <a href="#" class="link-git" target="blank"><i class="fa fa-github" ></i></a>
+        </div>
+      </div>
+      <div class="cardcontact" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine"
+        data-aos-duration="1200">
+        <div class="imgBx">
+          <img src="/images/d2.jpg" alt="">
+        </div>
+        <div class="content" data-aos="zoom-in" data-aos-duration="100">
+          <h2>Developer 3</h2>
+          <a href="#"><i class="fa fa-envelope"></i>abc56@gmail.com</a>
+          <a href="#" class="link-git" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+          <a href="#" class="link-git" target="_blank"><i class="fa fa-github"></i></a>
+        </div>
+      </div>
+          </div>
+
+  </div>
+  <div style="height: 40px;"></div>
+
+  <!-- ..................SCRIPT....................................-->
+
+      <script>
+    var show = document.getElementById("nav-links");
+    function showMenu() {
+      show.style.top = "0";
+
+    }
+    function closeMenu() {
+      show.style.top = "-850px";
+
+    }
+    function navigate() {
+      window.location = "/login"
+    }
+    function logout() {
+      window.location = "/logout"
+    }
+      </script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+      </script>
+      <script>
+    AOS.init();
+      </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

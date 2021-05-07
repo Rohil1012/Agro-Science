@@ -1,0 +1,184 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar
+{
+    width: 0;
+}
+body
+{
+    font-family: sans-serif;
+    background: #1b1e21;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+
+h1
+{
+    color: #ffce63;
+    margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 3.5vw;
+    /* margin: 15px 0px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 3.5vw;
+    padding: 10px 0; */
+}
+
+.scrollBox
+{
+    float: right;
+    width: 300px;
+    height: 80vh;
+     margin: 13px 10px;
+    overflow-y: scroll;
+    background-color: #2e8d86;
+    border-radius: 10px;
+    border: 12px solid #ffce63;
+}
+
+.container .video
+{
+    /* float: left; */
+    width: 650px;
+    height: 100%;
+    margin: 70px 20px;
+    margin-left: 60px;
+    /* border-radius: 20px; */
+}
+video
+{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    outline: none;
+}
+.box
+{
+    overflow: hidden;
+    max-width: 280px;
+    max-height: 150px;
+    margin: 10px 10px;
+    display: inline-block;
+    position: relative;
+    border-radius: 10px;
+}
+.box:hover
+{
+    box-shadow: 0px 5px 30px 0px #1b1e21;
+}
+.box img
+{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.btn
+{
+    display: inline-block;
+    text-decoration: none;
+    background:#2e8d86;
+    color: #fff;
+    padding: 0.5em 1.2em;
+    margin-top: 0.8rem;
+    margin-left: 10px;
+    position: relative;
+    transition: 0.2s ease-in-out;
+    border-radius: 3px;
+}
+.btn:hover
+{
+    box-shadow: 5px 5px 20px  0px #000;
+    transform: scale(1.3);
+}
+h3
+{
+    color: #fff;
+    margin: 0 10px;
+}
+.box .box-content
+{
+    position: absolute;
+    top: 80%;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    z-index: 2;
+    transition: all .5s ease-in-out;
+}
+.box::after
+{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    z-index: 1;
+    transform: scaleY(0);
+    transform-origin: 100% 100%;
+    background: rgba(0, 0, 0, 0.73);
+    transition: all .3s ease-in-out;
+}
+.box:hover .box-content
+{
+    opacity: 1;
+    top: 30%;
+}
+.box:hover::after
+{
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+.scrollTop
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 100000;
+}
+@media(max-width: 865px){
+    .container .video
+    {
+        width: 95%;
+    }
+}
+@media(max-width: 775px){
+    .container .video
+    {
+        width: 95%;
+    }
+    .scrollBox{
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+}
+@media(max-width: 500px){
+    .container .video
+    {
+        width: 97%;
+    }
+    .scrollBox{
+        margin-left: 20px;
+        margin-right: 50px;
+    }
+}

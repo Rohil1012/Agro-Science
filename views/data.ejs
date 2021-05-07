@@ -1,0 +1,208 @@
+<html>
+
+<head>
+    <title>Commodity Prices</title>
+    <meta charset="UTF-8">
+    
+    <!-- datatables -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <!-- font-awesome -->
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+    <!-- ............logic for fetch data..................... -->
+    <script>
+        $(document).ready(function () {
+            //url
+            let baseurl = "https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=579b464db66ec23bdd0000019b3d122ad1e844b1767aa69c3fe87d2c&format=json&offset=0&limit=1000&filters=state";
+            //call xmlhttp Request
+            let xmlhttp = new XMLHttpRequest();
+            //call url
+            xmlhttp.open("GET", baseurl + "/all", true);
+
+            xmlhttp.onreadystatechange = function () {
+
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    //fetch data
+                    let records = JSON.parse(xmlhttp.responseText);
+                    //response Data
+                    var agrData = records.records;
+                    $("#example").DataTable({
+                        data: agrData,
+                        "columns": [
+                            { "data": "arrival_date" },
+                            { "data": "state" },
+                            { "data": "district" },
+                            { "data": "market" },
+                            { "data": "commodity" },
+                            { "data": "variety" },
+                            { "data": "min_price" },
+                            { "data": "max_price" },
+                            { "data": "modal_price" },
+
+                        ]
+                    });
+                }
+            };
+            xmlhttp.send();
+        });
+    
+    </script>
+
+    <style>
+        
+        .nav{
+            position: sticky;
+          
+        }
+        h1 {
+            color: #0c645e;
+            margin-bottom: 10px;
+            font-family: sans-serif;
+            font-size: 4.0vw;
+        }
+        .title{
+            display: block;
+        }
+      
+        .icon{
+            display: block;
+            float: left;
+        }
+        .icon>a{
+            position: relative;
+            left:30px;
+            top: 5px;
+        }
+        .fa{
+       font-size: 50px;
+       color: #0c645e;
+       cursor: pointer;
+        }
+          .table {
+            margin-left: 50px;
+        }
+/* ............................... */
+        
+        #loader {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 1;
+            width: 100px;
+            height: 100px;
+            margin: -76px 0 0 -76px;
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #0c645e;
+            -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
+        }
+
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Add animation to "page content" */
+        .animate-bottom {
+            position: relative;
+            -webkit-animation-name: animatebottom;
+            -webkit-animation-duration: 1s;
+            animation-name: animatebottom;
+            animation-duration: 1s
+        }
+
+        @-webkit-keyframes animatebottom {
+            from {
+                bottom: -100px;
+                opacity: 0
+            }
+
+            to {
+                bottom: 0px;
+                opacity: 1
+            }
+        }
+
+        @keyframes animatebottom {
+            from {
+                bottom: -100px;
+                opacity: 0
+            }
+
+            to {
+                bottom: 0;
+                opacity: 1
+            }
+        }
+
+        #myDiv {
+            display: none;
+            text-align: center;
+        }
+    
+    </style>
+
+</head>
+
+<body onload="myFunction()">
+    <div class="nav">
+        <div class="icon">
+            <a href="/"><i class="fa fa-chevron-circle-left back"></i></a>
+        </div>
+        <div class="title">
+            <h1>
+                <center>DAILY PRICE OF COMODITIES</center>
+            </h1>
+        </div>
+    </div>
+    <div id="loader"></div>
+    <table id="example" class="display" style="width:100%">
+        <thead>
+            <tr>
+            <tr>
+                <th>arrival_date</th>
+                <th>State</th>
+                <th>district</th>
+                <th>market</th>
+                <th>commodity</th>
+                <th>variety</th>
+                <th>min_price</th>
+                <th>max_price</th>
+                <th>modal_price</th>
+            </tr>
+            </tr>
+        </thead>
+    </table>
+</body>
+<script>
+      var myVar;
+
+        function myFunction() {
+            myVar = setTimeout(showPage, 1000);
+        }
+
+        function showPage() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("example").style.display = "block";
+        } 
+</script>
+</html>

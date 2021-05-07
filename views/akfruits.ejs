@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruits</title>
+    <!-- vbar -->
+    <link rel="stylesheet" href="/css/vbar.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Original+Surfer&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: sans-serif;
+            font-size: 10px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #1b1e21;
+
+            padding: 0 1.5rem;
+        }
+
+        .container {
+
+            width: 100%;
+            max-width: 88rem;
+            padding: 5rem;
+            height: 220px;
+            background: #dfdac4;
+            box-shadow: 5px 7px 6px 0px rgba(104, 104, 104, 0.972);
+            display: flex;
+            align-items: center;
+            border-radius: .8rem;
+            margin: 15px;
+            margin-left: 70px;
+            margin-top: 40px;
+
+        }
+
+
+
+        .image {
+            min-width: 35rem;
+            max-width: 35rem;
+            height: 17rem;
+            transform: translateX(-8rem);
+            position: relative;
+            box-shadow: .5rem .5rem 3px 1px rgba(0, 0, 0, 0.5);
+            border-radius: .8rem;
+        }
+
+        .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: .8rem;
+        }
+
+
+
+
+        .title {
+            font-family: 'Original Surfer', cursive;
+            font-size: 3.5rem;
+            margin-right: 63px;
+            text-transform: uppercase;
+            color: #0c645e;
+            
+        }
+
+        .modal-open {
+            padding: 8px 16px;
+            background: #ac7b7d;
+            background-image: url("/images/akbg1.jpg");
+            color: #fff;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            margin: 5px 0;
+            font-size: 18px;
+            font-weight: bold;
+            width: 250px;
+            position: relative;
+            transform: translateX(6rem);
+        }
+
+        .modal-open:hover {
+            background-image: url("/images/akbg2.jpg")
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 2;
+            display: none;
+            animation: modal-open .5s;
+        }
+
+        .modal-content {
+            background-image: url("/images/akmbg.jpg");
+            margin-top: 55px;
+            width: 80%;
+            height: auto;
+            margin-bottom: auto;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 8px 24px;
+            border-radius: 10px;
+            z-index: 4;
+        }
+
+        .modal-header {
+            font-weight: 500;
+            padding: 10px 0;
+            font-size: 30px;
+            font-weight: 600;
+            color: rgb(153, 16, 16);
+
+        }
+
+        .modal-header .modal-close {
+            float: right;
+            font-size: 20px;
+            background: none;
+            border: none;
+            padding: 5px 8px;
+            cursor: pointer;
+
+        }
+
+        .modal-body {
+            color: #08073f;
+            font-size: 17px;
+            padding: 15px 0;
+            font-weight: 800;
+        }
+
+        .modal-footer {
+            padding: 15px 0;
+        }
+
+        .modal-footer .modal-close {
+            padding: 8px 16px;
+            font-size: 14px;
+            border: none;
+            outline: none;
+            background-image: url('/images/akmbbg.jpg');
+            border-radius: 5px;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        @keyframes modal-open {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="content">
+        <div class="vertical-bar">
+            <div class="search-icon">
+                <a href="/agriknowledge"><i class="fa fa-chevron-circle-left"></i></a>
+                <a href="/"><i class="fa fa-home"></i></a>
+
+            </div>
+            <div class="social-icons">
+            </div>
+        </div>
+    </div>
+
+    <!-- container 01 -->
+    <div class="container">
+        <div class="image">
+            <img src="/images/kfrbanana.jpg">
+        </div>
+   
+            <h1 class="title">Banana</h1>
+       
+
+        <div class="info">
+            <button class="modal-open" data-modal="modal1">CLIMATE & SOIL</button><br>
+            <button class="modal-open" data-modal="modal2">PLANTING & MANUARING</button><br>
+            <button class="modal-open" data-modal="modal3">HARVESTING & YIELD</button><br>
+            <button class="modal-open" data-modal="modal4">PLANT PROTECTION</button><br>
+        </div>
+    </div>
+
+    <!-- container 02 -->
+    <div class="container">
+        <div class="image">
+            <img src="/images/kfrmango.jpg">
+        </div>
+        <h1 class="title" style="margin-left: 17px;">MANGO</h1>
+        <div class="info">
+            <button class="modal-open" data-modal="modal5">CLIMATE & SOIL</button><br>
+            <button class="modal-open" data-modal="modal6"> PLANTING & INTERCROPS</button><br>
+            <button class="modal-open" data-modal="modal7">FERTILISERS & IRRI.</button><br>
+            <button class="modal-open" data-modal="modal8">PORTECTION & HARVESTING</button><br>
+        </div>
+    </div>
+
+    <!-- container 03 -->
+    <div class="container">
+        <div class="image">
+            <img src="/images/kfrpineapple.jpg">
+        </div>
+        <h1 class="title" style="margin-right: 17px;">PINEAPPLE</h1>
+        <div class="info">
+            <button class="modal-open" data-modal="modal9">CLIMATE & SOIL</button><br>
+            <button class="modal-open" data-modal="modal10">PLANTING & MANUARING</button><br>
+            <button class="modal-open" data-modal="modal11">HARVESTING & YIELD</button><br>
+            <button class="modal-open" data-modal="modal12">VARIETIES</button><br>
+        </div>
+    </div>
+
+    <!-- C01 M01 -->
+    <div class="modal" id="modal1">
+        <div class="modal-content">
+            <div class="modal-header">CLIMATE & SOIL
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+
+            <div class="modal-body">Climate:<br> Being a tropical crop, banana requires warm, humid and rainy climate.
+                The optimum temperature range is 10 to
+                400C and the relative humidity is 90% or above. It is highly susceptible to frost and cannot tolerate
+                arid conditions.
+                Strong desiccating winds cause considerable reduction in the growth of the plant and yield and quality
+                of fruits. <br><br>Soil:<br> Banana is a heavy feeder crop/. Therefore, fertility of soil is very
+                important. Rich, well drained, fertile, free
+                working, soils with plenty of organic matter are best suited for cultivation. The optimum range of pH of
+                soil should be
+                6 to 8.</div>
+            <div class="modal-footer">
+                <button class="link modal-close">CLOSE</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C01 M02 -->
+    <div class="modal" id="modal2">
+        <div class="modal-content">
+            <div class="modal-header">PLANTING & MANUARING
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+            <div class="modal-body">Planting: <br> of banana is done by two methods viz. Pit method and furrow method.
+                Planting is done from February to
+                May whereas in North India, it is done during July-August. In South-India, it can be done any time of
+                year except
+                summer. Tall varieties should be planted at 3x3 m whereas dwarf ones at 2x2 m apart.<br><br>
+                Manuaring:<br> Banana is a heavy feeder and responds well to manuring. Banana is a quick growing and
+                short-lived plant.
+                Therefore, it is more beneficial, if quick growing fertilizers are applied. In Tamil Nadu, application
+                of 100 g of N, 30
+                g of P2O5 and 300 g of K2O per plant to be supplied in three doses during the second, third and fifth
+                months is
+                recommended. In Maharashtra, 100 g N, 40 g P2O5 and 100 g K2O per plant is recommended. Out of these,
+                P2O5 and K2O is
+                applied at the time of planting and N is given is three split doses: third, fourth and fifth month after
+                planting.</div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C01 M03 -->
+    <div class="modal" id="modal3">
+        <div class="modal-content">
+            <div class="modal-header">HARVESTING & YIELD
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+            <div class="modal-body">Harvesting and Yield:<br> Harvesting of banana is done 12 to 15 months after
+                planting in dwarf and 15 to 18 months after
+                planting in tall varieties. Signs of maturity of banana fruits are, fruit becomes plumpy and angles are
+                filled in
+                completely, when tapped gives metallic sound, drying off of top leaves and change in colour of fruits
+                from deep green to
+                light green. <br><br>
+
+                Tall varieties like Poovan yield 15-25 tonnes/ha, while Dwarf Cavenshish yield 25-50 tonnes/ha. It can
+                be stored at
+                temperature slightly above 550F and relative humidity of about 85-95% for about three weeks.</div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C01 M04 -->
+    <div class="modal" id="modal4">
+        <div class="modal-content">
+            <div class="modal-header">PLANT PROTECTION
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+
+            <div class="modal-body">
+
+                Disease : Important diseases of banana are:<br><br>
+
+                Panama wilt:<br> It is caused by the soil bourne fungi Fusarium oxysporum.
+                Symptoms: Leaves become yellow, Pseudostem splits and breaks.
+                Control Measures: Eradication of the infected plants. Growing resistant varieties like Dwarf Cavendish.
+                Soil drenching
+                with Vapam @ 0.85% and mercuric chloride @ 3000 PPM in nursery.<br><br>
+
+
+
+                Insect pests:- Important insect pests are:<br><br>
+
+                Root stock weevil:- <br>Damaging stage is adult and grub
+                Symptoms of damage:- Grub bores into stem which is affected by fungi or bacteria.
+                Control measures: - Use healthy suckers and rhizomes. Before planting treat the pit with 0.65 %. Lindane
+                60-80 g/pit.
+                Soak the sucker in 0.1% Lindane solution, spray 0.05 % endosulfan.</div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C02 MO1 -->
+    <div class="modal" id="modal5">
+        <div class="modal-content">
+            <div class="modal-header">CLIMATE & SOIL
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+            <div class="modal-body">Climate and Temperature<br><br>
+            The mango flowers and fruits during dry season, which is characterized by absence of rainfall. Rain or cloudy weather at
+            the time of flowering causes considerable damage to mango as it adversely affects flowering and fruit set and increases
+            incidence of pests and diseases. It grows where temperature drops as low as 00C. And as high as 460C. However, it
+            thrives best at temperature around 270C. It grows well both in low (25 cm) and high (250 cm) rainfall areas. However
+            with annual rainfall around 75 cm, it grows without irrigation.<br><br>
+            
+            Soil<br><br>
+            The coconut palm can grow in a wide range of soil conditions ranging from laterite, alluvial, red, sandy loam having pH
+            range from 5.5 to 8.0. Soil should be fertile and good drainage without any hard substratum within one of the surface.</div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C02 M02 -->
+    <div class="modal" id="modal6">
+        <div class="modal-content">
+            <div class="modal-header">PLANTING & INTERCROPS
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+            <div class="modal-body">Planting<br>
+            Planting of mango grafts of desired variety is done with commencement of rains while in heavy rainfall regions. Selected healthy grafts with smooth union and true to type, obtained from
+            reliable source should be planted. At the time of planting, the graft is carefully placed in the pit after removing the
+            Polythene bag and soil is packed firmly around the roots. 
+            Young plants are trained by removing lower branches upto half meter from ground level, only 4 to 5 well spaced branches
+            are allowed to grow in different directions to form main limbs of the Tree.<br><br>
+            
+            Intercrops/ covercrops<br>
+            In young orchards, vegetables and other low growing crops like groundnut, blackgram, green gram, cowpea are grown as
+            intercrops/ covercrops. Cultivation helps to check the weed and improves the growth of the trees besides giving some
+            income to the growers till mango plants start bearing 4-5 years after planting.</div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C02 M03 -->
+    <div class="modal" id="modal7">
+        <div class="modal-content">
+            <div class="modal-header">FERTILISERS & IRRIGATION
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+            <!-- <img src="animals.jpg" style="width: 150px; height: 120px;"> -->
+            <div class="modal-body">Fertilisers<br>
+            A young orchard be supplied with 10 kg FYM + 100 Kg Nitrogen (N) + 50 g Phosphorus (P2O5) + 100 g Potassium (K2O) per
+            tree in the first year and it should be increased with age. The 10 year old tree should get FYM + 1 Kg N + 500 g P2O5 +
+            1000 g K2O. If irrigation is available, additional dose of 500 g N be given in the month of February – March.<br><br>
+            
+            Irrigation<br>
+            Newly planted grafts be irrigated at 3-4 days interval for 6 months, thereafter interval should be 8 – 10 days depending
+            upon climate Irrigation interval of 10-15 days is adequate for 1-5 year old plants. For bearing trees, irrigation should
+            not be given prior to flowering for 2-3 months as it promotes vegetative growth and reduces the crop. When the fruits
+            have developed to the size of a marble, irrigation can be started and continued at weekly or fortnightly intervals. This
+            helps to reduce fruit drop, promotes rapid fruit development, early maturity and improves quality. However, mango is
+            mostly grown as rainfed crop.</div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C02 M04 -->
+    <div class="modal" id="modal8">
+        <div class="modal-content">
+            <div class="modal-header">PLANT PROTECTION & HARVESTING
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+            <div class="modal-body">
+            Plant protection<br>
+            
+            Mango hoppers, insect pest and powdery mildew disease are the major problems on mango, to control both these dusting
+            with 10 percent Carbaryl dust plus sulphur 300 mesh in the ratio of 1:1. Three to four times at fortnightly intervals
+            starting from prior to the emergence of first inflorence is recommended. Trunks of the tree should also be dusted
+            thoroughly.<br><br>
+            
+            Harvesting<br>
+            Mango fruits mature in 3-4 months from flowering, Fruit colour changes from dark green to light green on maturity.
+            Harvesting should be started after few fruits drop, during morning hours. Individual fruits are clipped with 1.5 cm
+            stalk using mango harvester. Harvested fruits are kept on gunny bags under shade. Under sized, bruized and infested
+            fruits are sorted out and healthy fruits are graded into 2 – 3 grades depending upon colour, shape and size and packed
+            in wooden or corrugated boxes.</div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C03 M01 -->
+    <div class="modal" id="modal9">
+        <div class="modal-content">
+            <div class="modal-header">CLIMATE & SOIL
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+            <div class="modal-body">Climate:<br> Pineapple is tropical fruit. It requires moderate temperature and high humidity. The optimum temperate range is
+            210C to 230C. At low temperature, no fruit bud differentiation takes place. A well-distributed rainfall of 150 c. m. per
+            year is adequate.<br><br>
+            
+            Soil:<br> Crop is grown on light to medium soils. Soils should be well drained. Sandy loams, laterites and slightly acidic
+            soils with pH 5.5 to 6.00 are suitable for crop cultivation.<br><br>
+            
+            Propagation: <br> Pineapple is propagated by vegetative method, suckers, slips, crown and disc are used for its
+            multiplication. Slips are best for planting.</div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C03 M02 -->
+    <div class="modal" id="modal10">
+        <div class="modal-content">
+            <div class="modal-header">PLANTING & MANUARING
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+
+            <div class="modal-body">Planting:<br> For planting rainy season is the best, planting is done at beginning of monsoon in dry region and at the end
+            of the monsoon in high rainfall area. Planting is done either in flat beds or in shallow trenches. The planting distance
+            in the single row system should be 25 x 60 x 90 cm and in double row system 25 x 30 x 90cm.<br><br>
+            
+            Manuring: <br>Pineapple is heavy feeder. It requires 600 kg N, 400 kg P and 400kg K per ha. Nitrogen is given in two split
+            doses, first at begining of monsoon and second in the month of February..</div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C03 M03 -->
+    <div class="modal" id="modal11">
+        <div class="modal-content">
+            <div class="modal-header">HARVESTING & YIELD
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+            <div class="modal-body">Harvesting and Yield: <br>It matures in both 15 to 20 months after planting. Usually flowering takes place from February to
+            April and fruits are ready from July to September. The fruits are harvested when they just become yellow. An average
+            yield is 10 to15 tonnes per hectare.</div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- C03 M04 -->
+    <div class="modal" id="modal12">
+        <div class="modal-content">
+            <div class="modal-header">VARIETIES
+                <button class="icon modal-close">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+            <div class="modal-body">
+            
+            Gaint kew or kew:-<br> It is one of the most important cultivars of Pineapple . It is ideal for canning industry. Flesh of
+            the fruit is yellow, fibreless and juicy. The fruit is cylindrical in shape with average weight 1.9 kg . It is a late
+            maturing variety.<br><br>
+            
+            Queen :- <br>It is the second important cultivar which is grown in our country. It is an early maturing variety, used as
+            table variety. It is mostly grown in Bengal region. The fruits are small cylindrical, with average weight 1.2 kg. Fruit
+            colour is golden yellow while the flesh is deep golden yellow.<br><br>
+            
+            Mauritius :- <br>It is a mid season variety. Fruits of this variety are medium sized with yellow and red skin.
+            
+            </div>
+            <div class="modal-footer">
+                <button class="link modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/akfruits.js"></script>
+</body>
+
+</html>
