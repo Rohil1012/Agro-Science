@@ -78,4 +78,4 @@ Every project needs improvements, Feel free to report any bugs or improvements. 
 
 ## Screenshots
 ![GitHub Logo](/Screenshots/1.PNG)
-Format: ![Alt Text](https://github.com/Rohil1012/Agro-Science/blob/master/Screenshots/1.PNG)
+
