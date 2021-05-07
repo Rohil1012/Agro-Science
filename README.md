@@ -75,3 +75,7 @@ Every project needs improvements, Feel free to report any bugs or improvements. 
 - Server side validation for Login/ Sign-up  
 - Not responsive UI
 - User can not answer in every query post
+
+## Screenshots
+![GitHub Logo](/Screenshots/1.PNG)
+Format: ![Alt Text](https://github.com/Rohil1012/Agro-Science/blob/master/Screenshots/1.PNG)
