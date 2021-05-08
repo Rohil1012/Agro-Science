@@ -83,7 +83,7 @@ Every project needs improvements, Feel free to report any bugs or improvements. 
 ![Screenshots](/Screenshots/4.PNG)
 ![Screenshots](/Screenshots/5.PNG)
 ![Screenshots](/Screenshots/6.PNG)
-![Screenshots](/Screenshots/7 (2).png)
+![Screenshots](/Screenshots/7(2).png)
 ![Screenshots](/Screenshots/8.PNG)
 ![Screenshots](/Screenshots/9.PNG)
 ![Screenshots](/Screenshots/10.PNG)
